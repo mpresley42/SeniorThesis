@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      9170,        230]
-NotebookOptionsPosition[      8761,        211]
-NotebookOutlinePosition[      9117,        227]
-CellTagsIndexPosition[      9074,        224]
+NotebookDataLength[     10068,        248]
+NotebookOptionsPosition[      9658,        229]
+NotebookOutlinePosition[     10015,        245]
+CellTagsIndexPosition[      9972,        242]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,6 +22,22 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "Notebook", " ", "plots", " ", "the", " ", "spectral", " ", 
+     "index", " ", "ns", " ", "as", " ", "a", " ", "function", " ", "of", " ",
+      "monomial", "  ", "power", " ", "for", " ", "potentials", " ", "of", 
+     " ", "the", " ", "form", " ", "v"}], "=", 
+    RowBox[{
+     RowBox[{"\[Lambda]", "*", 
+      RowBox[{
+       RowBox[{"\[Phi]", "^", "p"}], ".", " ", "The"}], " ", "slow", " ", 
+      "roll", " ", "approximation", " ", "is", " ", "used", " ", "to", " ", 
+      "find", " ", "ns", " ", "and", " ", "the", " ", "number", " ", "of", 
+      " ", "efolds", " ", 
+      RowBox[{"nsr", ".", " ", "ns"}], " ", "is", " ", "evaluated", " ", "at",
+       " ", "nsr"}], "=", "60."}]}], " ", "*)"}], "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
    "This", " ", "is", " ", "necessary", " ", "for", " ", "removing", " ", 
@@ -174,7 +190,9 @@ Cell[BoxData[
    3.62636341486154*^9, 3.626363526810794*^9}, {3.626363605183132*^9, 
    3.626363719350017*^9}, {3.6263637956586227`*^9, 3.6263638390518103`*^9}, {
    3.626363894719503*^9, 3.6263639081366873`*^9}, {3.626363963122295*^9, 
-   3.6263639781521*^9}, {3.6263667141333103`*^9, 3.626366783096627*^9}}],
+   3.6263639781521*^9}, {3.6263667141333103`*^9, 3.626366783096627*^9}, {
+   3.6282572599321737`*^9, 3.62825751909299*^9}, {3.628258006570425*^9, 
+   3.628258100930429*^9}}],
 
 Cell[BoxData["0.9666666666666667`"], "Output",
  CellChangeTimes->{{3.626363895988237*^9, 3.6263639088166847`*^9}, 
@@ -209,10 +227,10 @@ Cell[BoxData[
    3.626363980740069*^9, {3.626366732656665*^9, 3.626366784780901*^9}}]
 }, Open  ]]
 },
-WindowSize->{777, 775},
+WindowSize->{734, 765},
 WindowMargins->{{16, Automatic}, {Automatic, 0}},
-FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
-2012)",
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -227,10 +245,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 6771, 154, 539, "Input"],
-Cell[7353, 178, 186, 2, 28, "Output"],
-Cell[7542, 182, 185, 3, 28, "Output"],
-Cell[7730, 187, 1015, 21, 264, "Output"]
+Cell[579, 22, 7668, 172, 609, "Input"],
+Cell[8250, 196, 186, 2, 28, "Output"],
+Cell[8439, 200, 185, 3, 28, "Output"],
+Cell[8627, 205, 1015, 21, 234, "Output"]
 }, Open  ]]
 }
 ]
