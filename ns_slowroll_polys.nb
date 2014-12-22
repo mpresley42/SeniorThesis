@@ -1,0 +1,239 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9170,        230]
+NotebookOptionsPosition[      8761,        211]
+NotebookOutlinePosition[      9117,        227]
+CellTagsIndexPosition[      9074,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "This", " ", "is", " ", "necessary", " ", "for", " ", "removing", " ", 
+    "previously", " ", "defined", " ", "variables"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"(*", " ", 
+    RowBox[{"Define", " ", "a", " ", "potential"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"v", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+    RowBox[{"\[Lambda]", "*", 
+     RowBox[{"\[Phi]", "^", "4"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"findNs", " ", ":=", " ", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"nsr", ",", "\[Phi]60", ",", "ns"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+        "Define", " ", "number", " ", "of", " ", "efolds", " ", "using", " ", 
+         "slow"}], "-", 
+        RowBox[{"roll", " ", "approx"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"nsr", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+        FractionBox[
+         RowBox[{"v", "[", "\[Phi]", "]"}], 
+         RowBox[{
+          RowBox[{"v", "''"}], "[", "\[Phi]", "]"}]]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"find", " ", "\[Phi]60"}], ",", " ", 
+         RowBox[{
+          RowBox[{"\[Phi]", " ", "at", " ", "n"}], "=", "60"}]}], " ", "*)"}],
+        "\[IndentingNewLine]", 
+       RowBox[{"\[Phi]60", " ", "=", " ", 
+        RowBox[{"NSolve", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"nsr", "[", "\[Phi]", "]"}], "\[Equal]", "60"}], ",", 
+          "\[Phi]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Find", " ", "ns", " ", "in", " ", "the", " ", "slow", " ", "roll", 
+         " ", "approx", " ", "as", " ", "a", " ", "function", " ", "of", " ", 
+         "\[Phi]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ns", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"v", "'"}], "[", "\[Phi]", "]"}], "^", "2"}], 
+          RowBox[{
+           RowBox[{"v", "[", "\[Phi]", "]"}], "^", "2"}]], "+", 
+         RowBox[{
+          FractionBox["2", 
+           RowBox[{"v", "[", "\[Phi]", "]"}]], "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"v", "''"}], "[", "\[Phi]", "]"}], "-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"v", "'"}], "[", "\[Phi]", "]"}], "^", "2"}], 
+             RowBox[{"v", "[", "\[Phi]", "]"}]]}], ")"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Find", " ", "the", " ", "spectral", " ", "tilt", " ", "at", " ", 
+         "\[Phi]60"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Last", "[", 
+        RowBox[{
+         RowBox[{"ns", "[", "\[Phi]", "]"}], "/.", "\[Phi]60"}], " ", 
+        "]"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"v", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+    RowBox[{"\[Lambda]", "*", 
+     RowBox[{"\[Phi]", "^", "4"}]}]}], " ", "\[IndentingNewLine]", "findNs", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"v", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+     RowBox[{
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"Log", "[", "\[Phi]", "]"}], "\[IndentingNewLine]", "findNs", 
+        "\[IndentingNewLine]", 
+        RowBox[{"v", "[", "\[Phi]_", "]"}]}]}], " ", ":=", " ", 
+      RowBox[{
+       RowBox[{"\[Lambda]", "*", 
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "\[Alpha]"}], "*", "\[Phi]"}], "]"}], 
+        "\[IndentingNewLine]", "findNs", "\[IndentingNewLine]", 
+        RowBox[{"v", "[", "\[Phi]_", "]"}]}], " ", ":=", " ", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         RowBox[{"Cos", "[", "\[Phi]", "]"}], "\[IndentingNewLine]", 
+         "findNs"}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"NsList", " ", "=", " ", 
+    RowBox[{"{", "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"p", "=", "2"}], ",", 
+     RowBox[{"p", "<", "15"}], ",", 
+     RowBox[{"p", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "[", "\[Phi]_", "]"}], " ", ":=", " ", 
+       RowBox[{"\[Lambda]", "*", 
+        RowBox[{"\[Phi]", "^", "p"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"NsList", ",", "findNs"}], "]"}]}]}], "]"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Append", " ", "returns", " ", "a", " ", "new", " ", 
+     RowBox[{"list", ".", " ", "AppendTo"}], " ", "appends", " ", "to", " ", 
+     "given", " ", 
+     RowBox[{"list", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"NsList", ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"power", ",", "ns"}], "}"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.625839518513089*^9, 3.62583969262894*^9}, {
+   3.62583975818395*^9, 3.6258398281860647`*^9}, {3.6258400832547817`*^9, 
+   3.6258400890936413`*^9}, {3.625840343809823*^9, 3.6258403630736237`*^9}, 
+   3.625840535933301*^9, {3.625840864062196*^9, 3.625840864194256*^9}, {
+   3.625841522111847*^9, 3.6258415261281567`*^9}, {3.6258446756122227`*^9, 
+   3.6258446761348763`*^9}, {3.625845741721195*^9, 3.625845742164887*^9}, {
+   3.6263571055884037`*^9, 3.6263571145545387`*^9}, {3.6263608093770657`*^9, 
+   3.6263608858864603`*^9}, {3.6263609772695303`*^9, 3.626361050204719*^9}, {
+   3.626361145552992*^9, 3.626361413990498*^9}, {3.626361462749652*^9, 
+   3.626361575905305*^9}, {3.6263616082648*^9, 3.6263616510357027`*^9}, {
+   3.626361690736801*^9, 3.626361786908032*^9}, {3.626361836674045*^9, 
+   3.6263618530587*^9}, {3.626361992495265*^9, 3.6263620194229393`*^9}, {
+   3.6263620940729103`*^9, 3.626362137609531*^9}, {3.626362248803093*^9, 
+   3.626362365619823*^9}, {3.6263624314368553`*^9, 3.626362473706725*^9}, {
+   3.626362705610574*^9, 3.62636273457465*^9}, {3.62636280315524*^9, 
+   3.626362803417966*^9}, {3.626362841487899*^9, 3.626362884139366*^9}, {
+   3.6263629323249063`*^9, 3.62636296683039*^9}, {3.626363048166469*^9, 
+   3.6263630657326603`*^9}, {3.6263633400325193`*^9, 3.626363359149844*^9}, {
+   3.62636341486154*^9, 3.626363526810794*^9}, {3.626363605183132*^9, 
+   3.626363719350017*^9}, {3.6263637956586227`*^9, 3.6263638390518103`*^9}, {
+   3.626363894719503*^9, 3.6263639081366873`*^9}, {3.626363963122295*^9, 
+   3.6263639781521*^9}, {3.6263667141333103`*^9, 3.626366783096627*^9}}],
+
+Cell[BoxData["0.9666666666666667`"], "Output",
+ CellChangeTimes->{{3.626363895988237*^9, 3.6263639088166847`*^9}, 
+   3.626363980740069*^9, {3.626366732656665*^9, 3.626366784746232*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.626363895988237*^9, 3.6263639088166847`*^9}, 
+   3.626363980740069*^9, {3.626366732656665*^9, 3.626366784747973*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.24720000000000014`, 0.24, 0.6], 
+    PointBox[{{1., 0.9333333333333333}, {2., 0.9583333333333334}, {3., 
+     0.9666666666666667}, {4., 0.9708333333333333}, {5., 
+     0.9733333333333334}, {6., 0.975}, {7., 0.9761904761904762}, {8., 
+     0.9770833333333333}, {9., 0.9777777777777777}, {10., 
+     0.9783333333333334}, {11., 0.9787878787878788}, {12., 
+     0.9791666666666666}, {13., 0.9794871794871794}}]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["power", TraditionalForm], 
+    FormBox["ns", TraditionalForm]},
+  AxesOrigin->{0, 0.9484848484848485},
+  Method->{},
+  PlotRange->{{0, 13.}, {0.9484848484848485, 0.9794871794871794}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0.26, 0.26}, {0.0006200466200466193, 
+   0.0006200466200466193}}]], "Output",
+ CellChangeTimes->{{3.626363895988237*^9, 3.6263639088166847`*^9}, 
+   3.626363980740069*^9, {3.626366732656665*^9, 3.626366784780901*^9}}]
+}, Open  ]]
+},
+WindowSize->{777, 775},
+WindowMargins->{{16, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 6771, 154, 539, "Input"],
+Cell[7353, 178, 186, 2, 28, "Output"],
+Cell[7542, 182, 185, 3, 28, "Output"],
+Cell[7730, 187, 1015, 21, 264, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
