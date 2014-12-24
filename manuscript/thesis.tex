@@ -11,6 +11,8 @@
 %\usepackage{lscape}
 %\citestyle{aa}
 
+\def\d{\mathrm{d}}
+
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \newcommand{\mep}[1]{{\color{applegreen} \textbf{[MEP:  #1]}}}
 
@@ -24,7 +26,7 @@
 	\item Introduction \& Background Theory
 		\begin{itemize}
 			\item Story of Inflation
-			\item Motivation (Why do we need inflation)
+			\item Motivation (Why we need inflation)
 			\item Original failure of Guth's inflation
 			\item Slow roll inflation
 			\item Problems with current theory (domination of young bubbles; infinite multiverse)
@@ -49,5 +51,55 @@
 		\end{itemize}	
 	\item Conclusion
 \end{itemize}
+
+\section{Introduction}
+Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem. Simply put, the horizon problem is the realization that the universe is homogenous and isotropic on scales far larger than the particle horizon (the farthest distance from which a point could ever receive information, given the age and expansion rate of the universe). 
+
+\section{Mathematical Derivations (Not a real section, just a holding place for stuff)}
+Let $\phi$ be an inflationary field. It is governed by two equations, the Friedman equation: 
+\begin{equation}
+H = \sqrt{\tfrac{1}{3} \left ( \tfrac{1}{2} \dot \phi^2 + V(\phi) \right )},
+\label{eqn:Friedman}
+\end{equation}
+and the Klein-Gordon equation:
+\begin{equation}
+\ddot \phi + 3H \dot \phi + V'(\phi) = 0,
+\label{eqn:KG}
+\end{equation}
+where $H$ is the Hubble parameter, $V(\phi)$ is the inflationary potential, and a dot indicates a time derivative. In our convention, the reduced Planck mass is set to one, i.e. $M_{pl} = (8\pi G)^{-1/2} \equiv 1$. 
+
+Another useful definition is the number of e-folds until the end of inflation, defined as 
+\begin{equation}
+N = -\int_t^{t_{end}} H \d t \text{\ \ \ or\ equivalently\ \ \ } \d N = -H \d t. 
+\label{eqn:defN}
+\end{equation}
+If we let $\phi'$ denote the derivative of $\phi$ with respect to $N$, so that $\dot \phi = -H \phi'$ the Friedman equation becomes
+\begin{equation}
+H^2 = \frac{V(\phi)}{3 - \tfrac{1}{2}(\phi')^2},
+\end{equation}
+and the Klein-Gordon equation becomes 
+\begin{equation}
+2H^2\phi'' + H^2(\phi')^3 - 6H^2\phi' + 2V'(\phi) = 0.
+\end{equation}
+
+\subsection{Slow Roll Approximation}
+In the slow roll approximation, we assume that $\dot \phi$ and $\ddot \phi$ are small. In order for this to be true, the inflationary potential must not be varying rapidly, leading us to the slow roll approximations:
+\begin{equation}
+\left | \frac{V'(\phi)}{V(\phi)} \right | <<1 \text{\ \ \ and\ \ \ } \left | \frac{V''(\phi)}{V(\phi)} \right | <<1 .
+\label{eqn:SlowRollApprox}
+\end{equation}
+With these approximations, the Friedman equation becomes
+\begin{equation}
+3 H^2 \approx_{sr} V(\phi),
+\label{eqn:Friedman_sr}
+\end{equation}
+and the Klein-Gordon equation becomes
+\begin{equation}
+3 H \dot \phi \approx_{sr} -V'(\phi)
+\label{eqn:KG_sr}
+\end{equation}
+
+\bibliographystyle{apj}
+\bibliography{thesis}{}
 
 \end{document}
