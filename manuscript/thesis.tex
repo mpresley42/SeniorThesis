@@ -65,7 +65,7 @@ where $\rho^0_m$ is the energy density of matter in the universe at time $t=0$ (
 \begin{equation}
 H^2 = \left ( \frac{\dot a(t)}{a(t)} \right ) ^2 = \frac{8 \pi G}{3} \left [ \frac{\rho^0_m}{a^3} + \frac{\rho^0_r}{a^4} + \Lambda + \frac{\sigma^2}{a^6} + \frac{K}{a^2} + \frac{\rho^0_\phi}{a^{2\epsilon}} \right ]
 \end{equation}
-where $\phi^0_\phi$ is the energy density of the inflationary field and $\epsilon$ is an exponent that must satisfy $\epsilon>3$ for inflation to dominate in the early universe. \mep{I have in my notes that $\epsilon<1$ for inflation and $\epsilon>3$ for contraction, but that doesn't make sense, so I think that's wrong.} 
+where $\phi^0_\phi$ is the energy density of the inflationary field and $\epsilon$ is a positive exponent that must satisfy $\epsilon>3$ for inflation to dominate in the early universe. \mep{I have in my notes that $\epsilon<1$ for inflation and $\epsilon>3$ for contraction, but that doesn't make sense, so I think that's wrong.} 
 
 Now using this form for the inflationary term, let's examine what an inflation-dominated universe would look like. In a $\phi$-dominated universe, the Friedmann equation becomes:
 \begin{equation}
@@ -79,7 +79,24 @@ and hence
 \begin{equation}
 \ddot a(t) \propto \left ( \frac{1-\epsilon}{\epsilon} \right ) (H_0 \Omega_\phi)^{1/2\epsilon} t^{\tfrac{1-2\epsilon}{\epsilon}}. 
 \end{equation}
-From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!?}
+From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!?} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation $\epsilon = \tfrac{3}{2}(w+1)$. Table \ref{tab:field_scenarios} summarizes the values $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields. 
+
+\begin{table}[htbp]
+   \centering
+   \begin{tabular}{@{} lcccc @{}} % Column formatting, @{} suppresses leading/trailing space
+      \toprule
+      Field Type & $w=\rho/p$ &  $\epsilon=\tfrac{3}{2}(w+1)$ & $a(t)$ & $\ddot a(t)$ \\
+      \midrule
+      matter & 0 & $3/2$ & $\propto t^{2/3}$ & $>0$ \\
+       radiation & $1/3$ & $2$ & $\propto t^{1/2}$ & $<0$ \\
+       $\Lambda$ & $-1$ & $0$ & $\propto e^t$ & $>0$ \\
+       inflation & $<-1/3$ & $<1$ & $\propto t^{1/\epsilon}$ & $>0$ \\
+       contraction & $>1$ & $>3$ & $\propto t^{1/\epsilon}$ & $<0$ \\
+      \bottomrule
+   \end{tabular}
+   \caption{The values $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields.}
+   \label{tab:field_scenarios}
+\end{table}
 
 
 \subsection{Inflationary Field}
