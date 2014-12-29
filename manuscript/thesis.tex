@@ -12,6 +12,7 @@
 %\citestyle{aa}
 
 \def\d{\mathrm{d}}
+\def\L{\mathscr{L}}
 
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \newcommand{\mep}[1]{{\color{applegreen} \textbf{[MEP:  #1]}}}
@@ -55,8 +56,9 @@
 \section{Introduction}
 Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem. Simply put, the horizon problem is the realization that the universe is homogenous and isotropic on scales far larger than the particle horizon (the farthest distance from which a point could ever receive information, given the age and expansion rate of the universe). 
 
-\section{Mathematical Derivations (Not a real section, just a holding place for stuff)}
+\section{Derivation of an Inflationary Theory}
 \subsection{Inflationary Friedmann equation}
+\label{ssec:InflationaryFriedmann}
 To see how one could implement an inflationary theory, let us first examine a non-inflationary Friedmann equation:
 \begin{equation}
 H^2 = \left ( \frac{\dot a(t)}{a(t)} \right ) ^2 = \frac{8 \pi G}{3} \left [ \frac{\rho^0_m}{a^3} + \frac{\rho^0_r}{a^4} + \Lambda + \frac{\sigma^2}{a^6} + \frac{K}{a^2} \right ]
@@ -79,7 +81,7 @@ and hence
 \begin{equation}
 \ddot a(t) \propto \left ( \frac{1-\epsilon}{\epsilon} \right ) (H_0 \Omega_\phi)^{1/2\epsilon} t^{\tfrac{1-2\epsilon}{\epsilon}}. 
 \end{equation}
-From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!?} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation $\epsilon = \tfrac{3}{2}(w+1)$. Table \ref{tab:field_scenarios} summarizes the values $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields. 
+From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!?} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation $\epsilon = \tfrac{3}{2}(w+1)$. Thus, an inflationary field must have an equation of state $w<-1/3$. Table \ref{tab:field_scenarios} summarizes the values $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields. 
 
 \begin{table}[htbp]
    \centering
@@ -98,8 +100,27 @@ From this, we can see that the condition for an expanding universe is $\epsilon<
    \label{tab:field_scenarios}
 \end{table}
 
-
 \subsection{Inflationary Field}
+From section \ref{ssec:InflationaryFriedmann}, we saw that an inflationary field must have an equation of state $w<-1/3$. From this, we want to put constrains on the Lagrangian density $\L$. Let $\phi$ be an inflationary field. Its Lagrangian density takes the form:
+\begin{equation}
+\L = -\tfrac{1}{2} ( \partial_\mu \phi)^2 - V(\phi)
+\end{equation}
+Using the assumptions that $\phi$ is homogenous (so that $\partial_j \phi = 0$) and isotropic (so that we can use the Minkowski metric $\eta_{\mu\nu}$), we find that the stress-energy tensor of the field is
+\begin{equation}
+T_{\mu\nu} = -\eta_{\mu 0} \dot \phi^2 + \eta_{\mu\nu}(\tfrac{1}{2}\dot \phi^2+V(\phi)).
+\end{equation}
+From this, we find the equation of state is
+\begin{equation}
+w = \frac{\tfrac{1}{2} \dot \phi^2 - V(\phi)}{\tfrac{1}{2} \dot \phi^2 + V(\phi)}.
+\end{equation}
+Putting in the constraint on $w$ for inflation, we find that an inflationary field must satisfy 
+\begin{equation}
+\dot \phi^2 < V(\phi).
+\end{equation}
+\mep{Is this important? It seems it should be, but we never talked about it before...}
+
+
+\section{Eqns for Code}
 Let $\phi$ be an inflationary field. It is governed by two equations, the Friedmann equation: 
 \begin{equation}
 H = \sqrt{\tfrac{1}{3} \left ( \tfrac{1}{2} \dot \phi^2 + V(\phi) \right )},
