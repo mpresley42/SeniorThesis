@@ -72,17 +72,23 @@ where $\phi^0_\phi$ is the energy density of the inflationary field and $\epsilo
 
 Now using this form for the inflationary term, let's examine what an inflation-dominated universe would look like. In a $\phi$-dominated universe, the Friedmann equation becomes:
 \begin{equation}
-\left ( \frac{\dot a}{a} \right ) ^2 = \frac{H_0 \Omega_\phi}{a^{2\epsilon}},
+H^2 = \left ( \frac{\dot a}{a} \right ) ^2 = \frac{H_0 \Omega_\phi}{a^{2\epsilon}},
+\label{eqn:Friedmann_phi}
 \end{equation}
 where $H_0$ is the Hubble constant and $\Omega_\phi = \tfrac{8\pi G \rho_\phi}{3 H_0}$. Now, solving this equation for $a(t)$ gives
 \begin{equation}
 a(t) \propto (\epsilon \sqrt{H_0 \Omega_\phi} t)^{1/\epsilon},
+\label{eqn:inflation_a(t)}
 \end{equation}
 and hence 
 \begin{equation}
 \ddot a(t) \propto \left ( \frac{1-\epsilon}{\epsilon} \right ) (H_0 \Omega_\phi)^{1/2\epsilon} t^{\tfrac{1-2\epsilon}{\epsilon}}. 
 \end{equation}
-From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!? Also, I know for a fact that the radiation term dominates before matter. So to be consistent with that, higher (negative) powers dominate earlier.} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
+From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!? Also, I know for a fact that the radiation term dominates before matter. So to be consistent with that, higher (negative) powers dominate earlier.} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order for inflation to end, $\epsilon$ must grow to become greater than one, so we know that $\epsilon$ is not merely a constant. 
+
+\subsection{Inflationary Field \& Equation of State}
+
+In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
 \begin{equation}
 \epsilon = \tfrac{3}{2}(w+1). 
 \label{eqn:eps_w}
@@ -106,8 +112,8 @@ Thus, an inflationary field must have an equation of state $w<-1/3$. Table \ref{
    \label{tab:field_scenarios}
 \end{table}
 
-\subsection{Inflationary Field}
-From section \ref{ssec:InflationaryFriedmann}, we saw that an inflationary field must have an equation of state $w<-1/3$. From this, we want to put constrains on the Lagrangian density $\L$. Let $\phi$ be an inflationary field. Its Lagrangian density takes the form:
+
+From Table \ref{tab:field_scenarios}, we saw that an inflationary field must have an equation of state $w<-1/3$. From this, we want to put constrains on the Lagrangian density $\L$ for the inflationary field. Let $\phi$ be an inflationary field. Its Lagrangian density takes the form:
 \begin{equation}
 \L = -\half ( \partial_\mu \phi)^2 - V(\phi)
 \end{equation}
@@ -126,26 +132,42 @@ Putting in the constraint on $w$ for inflation, we find that an inflationary fie
 \end{equation}
 \mep{Is this important? It seems it should be, but we never talked about it before...}
 
-
-\section{Eqns for Code}
-Let $\phi$ be an inflationary field. It is governed by two equations, the Friedmann equation: 
-\begin{equation}
-H = \sqrt{\tfrac{1}{3} \left ( \half \dot \phi^2 + V(\phi) \right )},
-\label{eqn:Friedmann}
-\end{equation}
-and the Klein-Gordon equation:
+Once we have $\L$, we know that the equation of motion for the field is the Klein-Gordon equation:
 \begin{equation}
 \ddot \phi + 3H \dot \phi + V'(\phi) = 0,
 \label{eqn:KG}
 \end{equation}
-where $H$ is the Hubble parameter, $V(\phi)$ is the inflationary potential, and a dot indicates a time derivative. In our convention, the reduced Planck mass is set to one, i.e. $M_{pl} = (8\pi G)^{-1/2} \equiv 1$. 
+where $H$ is the Hubble parameter, $V(\phi)$ is the inflationary potential, and a dot indicates a time derivative. In our convention, the reduced Planck mass is set to one, i.e. $M_{pl} = (8\pi G)^{-1/2} \equiv 1$. Adding this to the Friedmann equation: 
+\begin{equation}
+H = \sqrt{\tfrac{1}{3} \left ( \half \dot \phi^2 + V(\phi) \right )}
+\label{eqn:Friedmann}
+\end{equation}
+completely determines the evolution of a universe dominated by an inflationary potential $V(\phi)$. It will be useful later on to re-write the Friedmann equation in terms of $\epsilon$. Putting together equations (\ref{eqn:Friedmann_phi}) and (\ref{eqn:inflation_a(t)}), we find that
+\begin{equation}
+\epsilon = -\frac{\dot H}{H}
+\label{eqn:Friedmann_epsilon}
+\end{equation}
 
-Another useful definition is the number of e-folds until the end of inflation, defined as 
+\subsection{Calculating Observable Parameters}
+Of course, the whole point of creating an inflationary theory is to be able to reproduce observational data. When observations from experiments such as WMAP and Planck observe the early universe, they measure the power spectrum of density fluctuations in the primordial plasma. \mep{More elaboration on where these come from}
+
+Instead of working in units of time, where the time at the end of inflation is difficult to pinpoint, we choose instead to work in terms of the number of e-folds until the end of inflation, defined as 
 \begin{equation}
 N = -\int_t^{t_{end}} H \d t \text{\ \ \ or\ equivalently\ \ \ } \d N = -H \d t. 
 \label{eqn:defN}
 \end{equation}
-If we let $\phi'$ denote the derivative of $\phi$ with respect to $N$, so that $\dot \phi = -H \phi'$ the Friedmann equation becomes
+In these units, the end of inflation is defined to occur at $N=0$, and current observations look at a narrow window centered on $N=60$. Note that as time increases, the number of e-folds decreases. 
+
+Figure \ref{fig:density_fluctuations} shows a schematic of the density fluctuations as a function of the wavenumber of the fluctuations ($\log k\sim\tfrac{1}{N}$). If the fluctuations were purely scale invariant, then the curve would be a horizontal line, the amplitude of the fluctuations independent of their wave number. Current observations see only a very limited range near $N=60$, so they focus on measuring (and we focus on predicting) the deviation from scale invariance at that point. This deviation is called the spectral tilt, denoted $n_s(k^*)$, where $k^*$ is the value of $k$ at $N=60$. 
+
+
+
+\subsection{Fine-tuning in an Inflationary Theory}
+Now that we have the basic mechanics of an inflationary theory, we see that defining an instance of an inflationary theory reduces to defining the inflationary potential $V(\phi)$. 
+
+
+\section{Eqns for Code}
+Let $\phi$ be an inflationary field governed by equations (\ref{eqn:Friedmann}) and (\ref{eqn:KG}). For the purposes of our code, we find it easier to work with $\phi$ not as a function of time but rather as a function of the number of e-folds until the end of inflation, defined in equation (\ref{eqn:defN}). If we let $\phi'$ denote the derivative of $\phi$ with respect to $N$, so that $\dot \phi = -H \phi'$ the Friedmann equation becomes
 \begin{equation}
 H^2 = \frac{V(\phi)}{3 - \half(\phi')^2},
 \end{equation}
