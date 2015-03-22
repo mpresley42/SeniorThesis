@@ -55,7 +55,63 @@
 \end{itemize}
 
 \section{Introduction}
-Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem. Simply put, the horizon problem is the realization that the universe is homogenous and isotropic on scales far larger than the particle horizon (the farthest distance from which a point could ever receive information, given the age and expansion rate of the universe). 
+\subsection{How to describe an inflationary theory}
+\label{ssec:GeneralDescription}
+The Standard Model that describes all of fundamental physics consists of many different fields (e.g. scalar, vector, Fermion, Boson) and interactions between the given fields. These are put together into a giant universe-encompassing Lagrangian, which then determines all possible interactions. An inflationary theory adds a scalar field $\phi$ and accompanying potential $V(\phi)$ to the Standard Model Lagrangian in order to facilitate the drastic expansion required in the early universe. For values of $\phi$ where the potential is large, the inflationary field encourages the expansion of the universe; when the potential is zero, then the inflationary field does not contribute to expansion. 
+
+As an example, consider the potential in Figure \ref{fig:MexHatCartoon}, which shows a potential colloquially called the ``Mexican hat'' potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. For this potential, the extremum at $\phi=0$ is referred to as the false vacuum. At this value of the field, the universe is inflating. However, since the false vacuum is unstable, the field will ``roll down the hill'' of the potential and end up at the true vacuum, $\phi=\sigma$. When the inflationary field settles in the true vacuum (which is stable), the inflationary period ends. Potentials like this which have a false vacuum at $\phi=0$ are called hilltop models. For hilltop models, the inflationary period is dominated by inflation at small values of $\phi$. Hence, in a polynomial expansion of the field the lowest order terms will dominate. Thus, the potential will have only a handful of parameters (corresponding to the coefficients of the lowest order terms) requiring constraint. However, as will be discussed in Section \ref{PlankComparison}, such models do not reproduce observational results.
+
+Another type of inflationary potential, which happens to be the form most in line with current observations, is the plateau model, shown in Figure \ref{fig:PlateauCartoon}. In this inflationary scenario the field begins at a large value of $\phi$ where the potential is nearly flat. The field then rolls down the hill towards smaller values of $\phi$, with inflation ending when the potential levels off to zero. Plateau models are examples of large-field models, in which the inflationary period is dominated by inflation at large values of $\phi$. Unlike in the hilltop case, inflation in the large-field models depends heavily on the higher order terms of the potential's expansion. Since small perturbations in the higher order terms will result in drastically different behavior, the potential requires an infinite number of constraining parameters. We will explore the sensitivity of such models to higher-order perturbation in Section \ref{BLANK}, arguing that this sensitivity reveals an undesirable amount of fine-tuning in such models of inflation.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.50\textwidth]{figures/hilltop_cartoon.pdf}
+	\caption{A schematic illustration of a hilltop potential, using the example of a Mexican Hat potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. The red ball symbolizes the inflationary field at a given time. The field rolls down the hill of the potential and settles in the vacuum state where the potential is zero, causing inflation to end. Note that in this scenario, the most inflation occurs at small values of $\phi$ and hence any hilltop model can be reasonably approximated by the first few lowest order terms.}
+	\label{fig:MexHatCartoon}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.50\textwidth]{figures/plateau_cartoon.pdf}
+	\caption{A schematic illustration of a plateau potential. The red ball symbolizes the inflationary field at a given time. The field rolls down the hill of the potential and settles in the vacuum state where the potential is zero, causing inflation to end. Note that in this scenario, the most inflation occurs at large values of $\phi$. Therefore, unlike in the hilltop case, the highest order terms will dominate.}
+	\label{fig:PlateauCartoon}
+\end{figure}
+
+The main purpose of an inflationary theory is to provide a mechanism to explain the homogeneity, isotropy, and flatness of the universe. As such, it is useful to look at the production of density perturbations during the inflationary period. During inflation, the magnitude of the density perturbations are inversely proportional to $\dot \phi$. Consequently, in regions where the potential is approximately constant, the perturbations would be unacceptably large. However, steeply-sloped potentials would cause the field to roll off the hill and end inflation before enough expansion took place. Therefore, there is a balancing game to be played in picking potentials. 
+
+As we will see in the sections to come, this game of picking potentials to predict observations stumbles across many obstacles. Since the introduction of inflationary theory 34 years ago, many inflationary potentials have been proposed. However, once they satisfy observations, we have no natural criteria for choosing which among them is the ``true'' potential describing the inflationary field. 
+
+In this paper we explore in the manner of \citet{Boyle+2006} a method of quantizing the amount of fine-tuning in an inflationary potential by counting the number of zeros in the equation of state and its derivatives. We find that ...
+
+\subsection{History of Inflationary Theory}
+\label{ssec:History}
+Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem, discussed in more detail in Sections \ref{ssec:horizon} and \ref{ssec:Flatness}. Guth's inflationary model, which proposed a period of exponential expansion in a false vacuum due to supercooling during cosmological phase transitions, solved both the horizon and flatness problems.  However, later work by Guth and Weinberg \citep{Guth+Weinberg1983} showed that the transition could not be smoothly completed in such a way that would result in a space homogeneously filled with the new phase. Further, a random region within the inhomogeneous space would be unlikely to resemble our own universe. 
+
+Andre Linde addressed these problems with a new inflationary theory in which inflation doesn't occur at the false vacuum but rather as the inflationary field rolled down the hill of the potential towards the true vacuum. This resolved the problem of the inhomogeneities because, as mentioned in Section \ref{ssec:GeneralDescription}, density fluctuations are inversely proportional to $\dot \phi$. Guth's previous model resulted in deSitter expansion, which corresponds to $\phi=const$, and hence results in unphysically large density fluctuations. Since in Linde's model inflation occurs as the field rolls down the hill, $\dot \phi \neq 0$ and perturbations can be made small enough to be physical. 
+
+Although Linde's new inflationary model solved some of the problems with Guth's original proposal, the new inflation still came with issues of its own. 
+
+\subsection{Horizon Problem}
+\label{ssec:horizon}
+Simply put, the horizon problem is the realization that the universe is homogenous and isotropic on scales far larger than the particle horizon (the farthest distance from which a point could ever receive information, given the age and expansion rate of the universe). The particle horizon is defined as 
+\begin{equation}
+d_p(t) = a(t) \int_0^t \frac{\d t}{a(t)},
+\label{eqn:particle_horizon}
+\end{equation}
+where $a(t)$ is the scale factor of the universe, normalized to 1 at the present time. Consider a radiation-dominated universe, which is governed by the Friedmann equation:
+\begin{equation}
+H^2 = \left ( \frac{\dot a(t)}{a(t)} \right ) ^2 = \frac{8 \pi G}{3} \frac{\rho^0_r}{a^4}.
+\end{equation}
+Integrating this equation finds $a(t) \propto t^{1/2}$. Putting this into equation (\ref{eqn:particle_horizon}) finds that $d_p(t) = 2t \propto a^2$. Now, the size of any homogenous region is proportional to $a$. Therefore, at very small times (e.g. the Planck time), the size of the particle horizon will necessarily be smaller than the size of any homogenous region. This is a problem because, in order for a homogenous region to make sense, there must be a time at which the size of the homogenous region was smaller than the particle horizon. 
+
+Observations of the CMB show the universe to homogenous to [Insert ridiculously small scale here], giving the homogenous region a size $l \sim c t_*$, where $t_*$ is the age of the universe at decoupling. The size of the homogenous region it must have originated from must have a size greater than $l_i \sim c t_* \tfrac{a_i}{a_*}$. However, the size of the particle horizon at that time was $l_h \sim c*t_*$. Therefore, comparing the two sizes, we find
+\begin{equation}
+\frac{l_i}{l_h} \sim \frac{a_i}{a_*} \sim \frac{T_*}{T_i}.
+\end{equation}
+ Taking $T_i$ to be the Planck temperature ($\sim 10^{32}$K) and $T_* \sim $
+
+\subsection{Flatness Problem}
+\label{ssec:Flatness}
 
 \section{Derivation of an Inflationary Theory}
 \subsection{Inflationary Friedmann equation}
@@ -147,6 +203,7 @@ completely determines the evolution of a universe dominated by an inflationary p
 \epsilon = -\frac{\dot H}{H}
 \label{eqn:Friedmann_epsilon}
 \end{equation}
+Note that, for general inflationary potentials, $\epsilon$ will not be constant in time. This is fortuitous since, in order for inflation to end, $\epsilon$ will have to go from a value greater than 1 to a value less than 1. We can also use this equation to further constrain the inflationary potential with a ``graceful exit'' condition. \mep{I think this is true. I need to look up more info \& elaborate.}
 
 \subsection{Calculating Observable Parameters}
 Of course, the whole point of creating an inflationary theory is to be able to reproduce observational data. When observations from experiments such as WMAP and Planck observe the early universe, they measure the power spectrum of density fluctuations in the primordial plasma. \mep{More elaboration on where these come from}
