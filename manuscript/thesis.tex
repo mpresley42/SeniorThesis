@@ -17,6 +17,7 @@
 
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \newcommand{\mep}[1]{{\color{applegreen} \textbf{[MEP:  #1]}}}
+\newcommand{\hl}[1]{\colorbox{yellow}{#1}}
 
 \begin{document}
 
@@ -81,7 +82,7 @@ The main purpose of an inflationary theory is to provide a mechanism to explain 
 
 As we will see in the sections to come, this game of picking potentials to predict observations stumbles across many obstacles. Since the introduction of inflationary theory 34 years ago, many inflationary potentials have been proposed. However, once they satisfy observations, we have no natural criteria for choosing which among them is the ``true'' potential describing the inflationary field. 
 
-In this paper we explore in the manner of \citet{Boyle+2006} a method of quantizing the amount of fine-tuning in an inflationary potential by counting the number of zeros in the equation of state and its derivatives. We find that ...
+In this paper we explore in the manner of \citet{Boyle+2006} a method of quantifying the amount of fine-tuning in an inflationary potential by counting the number of zeros in the equation of state and its derivatives. We find that \hl{...} We also explore a new method of quantifying the amount of fine-tuning in large field models that takes into account the sensitivity of the model to perturbations in higher-order terms. We find that \hl{...}
 
 \subsection{History of Inflationary Theory}
 \label{ssec:History}
@@ -124,9 +125,11 @@ where $\rho^0_m$ is the energy density of matter in the universe at time $t=0$ (
 \begin{equation}
 H^2 = \left ( \frac{\dot a(t)}{a(t)} \right ) ^2 = \frac{8 \pi G}{3} \left [ \frac{\rho^0_m}{a^3} + \frac{\rho^0_r}{a^4} + \Lambda + \frac{\sigma^2}{a^6} + \frac{K}{a^2} + \frac{\rho^0_\phi}{a^{2\epsilon}} \right ]
 \end{equation}
-where $\phi^0_\phi$ is the energy density of the inflationary field and $\epsilon$ is a positive exponent that must satisfy $\epsilon>3$ for inflation to dominate in the early universe. \mep{I have in my notes that $\epsilon<1$ for inflation and $\epsilon>3$ for contraction, but that doesn't make sense, so I think that's wrong.} 
-
-Now using this form for the inflationary term, let's examine what an inflation-dominated universe would look like. In a $\phi$-dominated universe, the Friedmann equation becomes:
+where $\rho^0_\phi$ is the energy density of the inflationary field and $\epsilon$ is a positive exponent. In order to ensure that the universe expands during the inflationary period, we must constrain the value of $\epsilon$. 
+%that must satisfy $\epsilon<1$ for inflation to dominate in the early universe. (Note: $\epsilon>3$ would cause contraction in the early universe.) 
+%\mep{I have in my notes that $\epsilon<1$ for inflation and $\epsilon>3$ for contraction, but that doesn't make sense, so I think that's wrong.} 
+%Now using this form for the inflationary term, 
+To do so, we must examine how an inflation-dominated universe would evolve. In a $\phi$-dominated universe, the Friedmann equation becomes:
 \begin{equation}
 H^2 = \left ( \frac{\dot a}{a} \right ) ^2 = \frac{H_0 \Omega_\phi}{a^{2\epsilon}},
 \label{eqn:Friedmann_phi}
@@ -140,11 +143,14 @@ and hence
 \begin{equation}
 \ddot a(t) \propto \left ( \frac{1-\epsilon}{\epsilon} \right ) (H_0 \Omega_\phi)^{1/2\epsilon} t^{\tfrac{1-2\epsilon}{\epsilon}}. 
 \end{equation}
-From this, we can see that the condition for an expanding universe is $\epsilon<1$. \mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!? Also, I know for a fact that the radiation term dominates before matter. So to be consistent with that, higher (negative) powers dominate earlier.} Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. In order for inflation to end, $\epsilon$ must grow to become greater than one, so we know that $\epsilon$ is not merely a constant. 
+From this, we can see that the condition for an expanding universe is $\epsilon<1$. 
+%\mep{Shoot. So my notes must have been right. But how can a small power in the denominator dominate at small values of a? That doesn't make sense!?!? Also, I know for a fact that the radiation term dominates before matter. So to be consistent with that, higher (negative) powers dominate earlier.} 
+However, note that at arbitrarily early times (small values of $a$), the anisotropy term will dominate. Thus, in order for inflation to dominate during early times, the value of $\rho^0_\phi$ compared to $\sigma^2$ and the other coefficients must be specified such that at the Planck scale the inflationary term will dominate. %Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. 
+Also, it is important to note that, in order for inflation to end, $\epsilon$ must grow to become greater than one, so we know that $\epsilon$ should be time-dependent. 
 
 \subsection{Inflationary Field \& Equation of State}
 
-In order to derive a field theory that will produce such an inflationary term, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
+In order to derive a field theory that will produce such an inflationary term consistent with the requirements detailed in Section \ref{ssec:InflationaryFriedmann}, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
 \begin{equation}
 \epsilon = \tfrac{3}{2}(w+1). 
 \label{eqn:eps_w}
@@ -164,12 +170,12 @@ Thus, an inflationary field must have an equation of state $w<-1/3$. Table \ref{
        contraction & $>1$ & $>3$ & $\propto t^{1/\epsilon}$ & $<0$ \\
       \bottomrule
    \end{tabular}
-   \caption{The values $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields.}
+   \caption{The values of $w$ and $\epsilon$ and the evolution of $a(t)$ for different types of fields.}
    \label{tab:field_scenarios}
 \end{table}
 
 
-From Table \ref{tab:field_scenarios}, we saw that an inflationary field must have an equation of state $w<-1/3$. From this, we want to put constrains on the Lagrangian density $\L$ for the inflationary field. Let $\phi$ be an inflationary field. Its Lagrangian density takes the form:
+From Table \ref{tab:field_scenarios}, we see that an inflationary field must have an equation of state $w<-1/3$. From this, we want to put constrains on the Lagrangian density $\L$ for the inflationary field. Let $\phi$ be an inflationary field. Its Lagrangian density takes the form:
 \begin{equation}
 \L = -\half ( \partial_\mu \phi)^2 - V(\phi)
 \end{equation}
@@ -177,7 +183,7 @@ Using the assumptions that $\phi$ is homogenous (so that $\partial_j \phi = 0$) 
 \begin{equation}
 T_{\mu\nu} = -\eta_{\mu 0} \dot \phi^2 + \eta_{\mu\nu}(\half\dot \phi^2+V(\phi)).
 \end{equation}
-From this, we find the equation of state is
+From this, we find that the equation of state is
 \begin{equation}
 w = \frac{\half \dot \phi^2 - V(\phi)}{\half \dot \phi^2 + V(\phi)}.
 \label{eqn:w}
@@ -193,9 +199,9 @@ Once we have $\L$, we know that the equation of motion for the field is the Klei
 \ddot \phi + 3H \dot \phi + V'(\phi) = 0,
 \label{eqn:KG}
 \end{equation}
-where $H$ is the Hubble parameter, $V(\phi)$ is the inflationary potential, and a dot indicates a time derivative. In our convention, the reduced Planck mass is set to one, i.e. $M_{pl} = (8\pi G)^{-1/2} \equiv 1$. Adding this to the Friedmann equation: 
+where $H$ is the Hubble parameter, $V(\phi)$ is the inflationary potential, and a dot indicates a time derivative. In our convention, the reduced Planck mass is set to one, i.e. $M_{pl} = (8\pi G)^{-1/2} \equiv 1$. Combining this with the Friedmann equation, 
 \begin{equation}
-H = \sqrt{\tfrac{1}{3} \left ( \half \dot \phi^2 + V(\phi) \right )}
+H = \sqrt{\tfrac{1}{3} \left ( \half \dot \phi^2 + V(\phi) \right )},
 \label{eqn:Friedmann}
 \end{equation}
 completely determines the evolution of a universe dominated by an inflationary potential $V(\phi)$. It will be useful later on to re-write the Friedmann equation in terms of $\epsilon$. Putting together equations (\ref{eqn:Friedmann_phi}) and (\ref{eqn:inflation_a(t)}), we find that
