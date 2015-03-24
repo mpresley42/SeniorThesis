@@ -10,6 +10,7 @@
 %\usepackage{pdflscape}
 %\usepackage{lscape}
 %\citestyle{aa}
+\usepackage{ amssymb }
 
 \def\d{\mathrm{d}}
 \def\L{\mathscr{L}}
@@ -219,14 +220,17 @@ Instead of working in units of time, where the time at the end of inflation is d
 N = -\int_t^{t_{end}} H \d t \text{\ \ \ or\ equivalently\ \ \ } \d N = -H \d t. 
 \label{eqn:defN}
 \end{equation}
-In these units, the end of inflation is defined to occur at $N=0$, and current observations look at a narrow window centered on $N=60$. Note that as time increases, the number of e-folds decreases. 
+Note that $N$ runs backwards in time, so as time increases the number of e-folds decreases. In these units, the end of inflation is defined to occur at $N=0$, so at this time $\epsilon=1$. Current observations look at a narrow window centered on $N=60\equiv N_*$.  
 
-Figure \ref{fig:density_fluctuations} shows a schematic of the density fluctuations as a function of the wavenumber of the fluctuations ($\log k\sim\tfrac{1}{N}$). If the fluctuations were purely scale invariant, then the curve would be a horizontal line, the amplitude of the fluctuations independent of their wave number. Current observations see only a very limited range near $N=60$, so they focus on measuring (and we focus on predicting) the deviation from scale invariance at that point. This deviation is called the spectral tilt, denoted $n_s(k^*)$, where $k^*$ is the value of $k$ at $N=60$. 
+Figure \ref{fig:density_fluctuations} shows a schematic of the density fluctuations as a function of the wavenumber of the fluctuations ($\log k\sim\tfrac{1}{N}$). If the fluctuations were purely scale invariant, then the curve would be a horizontal line, the amplitude of the fluctuations independent of their wave number. Since current observations see only a very limited range near $N_*$, so they focus on measuring (and we focus on predicting) the deviation from scale invariance at that point. This deviation is called the spectral tilt, denoted $n_s(k^*)$, where $k^*$ is the value of $k$ at $N_*$. 
 
-
+Following the work of \citet{Wang+1997}, we determine the spectral index to first order in $\epsilon$:
+\begin{equation}
+n_s \approx 1 - 2\epsilon - \frac{\d \ln(\epsilon)}{\d x} + \mathcal{O}(\epsilon^2)
+\end{equation}
 
 \subsection{Fine-tuning in an Inflationary Theory}
-Now that we have the basic mechanics of an inflationary theory, we see that defining an instance of an inflationary theory reduces to defining the inflationary potential $V(\phi)$. 
+Now that we have the basic mechanics of an inflationary theory, we see that defining an instance of an inflationary theory reduces to defining the inflationary potential $V(\phi)$. In order for inflation to be a predictive theory, we need to find a way to choose which potentials are reasonable and then find whether any of those potentials would generate a universe that conforms with observations. 
 
 
 \section{Eqns for Code}
