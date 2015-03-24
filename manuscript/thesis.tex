@@ -1,4 +1,5 @@
 \documentclass[onecolumn,apj]{emulateapj}
+%\documentclass[senior,black]{PrincetonThesis}
 \usepackage{ctable}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -19,6 +20,13 @@
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \newcommand{\mep}[1]{{\color{applegreen} \textbf{[MEP:  #1]}}}
 \newcommand{\hl}[1]{\colorbox{yellow}{#1}}
+
+%\title{Senior Thesis Draft}
+%\author{Morgan Presley}
+%\department{Department of Astrophysical Sciences}
+%\adviser{Paul Steinhardt}
+%\degreemonth{June}
+%\degreeyear{2015}
 
 \begin{document}
 
@@ -89,9 +97,11 @@ In this paper we explore in the manner of \citet{Boyle+2006} a method of quantif
 \label{ssec:History}
 Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem, discussed in more detail in Sections \ref{ssec:horizon} and \ref{ssec:Flatness}. Guth's inflationary model, which proposed a period of exponential expansion in a false vacuum due to supercooling during cosmological phase transitions, solved both the horizon and flatness problems.  However, later work by Guth and Weinberg \citep{Guth+Weinberg1983} showed that the transition could not be smoothly completed in such a way that would result in a space homogeneously filled with the new phase. Further, a random region within the inhomogeneous space would be unlikely to resemble our own universe. 
 
-Andre Linde addressed these problems with a new inflationary theory in which inflation doesn't occur at the false vacuum but rather as the inflationary field rolled down the hill of the potential towards the true vacuum. This resolved the problem of the inhomogeneities because, as mentioned in Section \ref{ssec:GeneralDescription}, density fluctuations are inversely proportional to $\dot \phi$. Guth's previous model resulted in deSitter expansion, which corresponds to $\phi=const$, and hence results in unphysically large density fluctuations. Since in Linde's model inflation occurs as the field rolls down the hill, $\dot \phi \neq 0$ and perturbations can be made small enough to be physical. 
+Andre Linde addressed these problems with a new inflationary theory in which inflation doesn't occur at the false vacuum but rather as the inflationary field rolled down the hill of the potential towards the true vacuum. \mep{Find Citation to presentation in 1981} A similar theory was simultaneously developed by \citet{Albrecht+Steinhardt1982}. This new inflation resolved the problem of the inhomogeneities because, as mentioned in Section \ref{ssec:GeneralDescription}, density fluctuations are inversely proportional to $\dot \phi$. Guth's previous model resulted in deSitter expansion, which corresponds to $\phi=const$, and hence results in unphysically large density fluctuations. Since in this new model inflation occurs as the field rolls down the hill, $\dot \phi \neq 0$ and perturbations can be made small enough to be physical. 
 
-Although Linde's new inflationary model solved some of the problems with Guth's original proposal, the new inflation still came with issues of its own. 
+Although the new inflationary model solved some of the problems with Guth's original proposal, new inflation still came with issues of its own. For instance, the inflation field in the new theory often could not begin in thermal equilibrium with other fields, invalidating the use of cosmological phase transitions, which formed the basis of new inflation theory \citep{Linde2000}. Also, in the new inflationary scenario, inflation can only begin after at a time at least six orders of magnitude later than the Planck time, which is the order of a typical lifetime for a hot, closed universe \citep{LindeBook2005}. These problems, together with others, suggested that new inflation needed to be replaced with an even newer theory. 
+
+
 
 \subsection{Horizon Problem}
 \label{ssec:horizon}
@@ -222,12 +232,18 @@ N = -\int_t^{t_{end}} H \d t \text{\ \ \ or\ equivalently\ \ \ } \d N = -H \d t.
 \end{equation}
 Note that $N$ runs backwards in time, so as time increases the number of e-folds decreases. In these units, the end of inflation is defined to occur at $N=0$, so at this time $\epsilon=1$. Current observations look at a narrow window centered on $N=60\equiv N_*$.  
 
-Figure \ref{fig:density_fluctuations} shows a schematic of the density fluctuations as a function of the wavenumber of the fluctuations ($\log k\sim\tfrac{1}{N}$). If the fluctuations were purely scale invariant, then the curve would be a horizontal line, the amplitude of the fluctuations independent of their wave number. Since current observations see only a very limited range near $N_*$, so they focus on measuring (and we focus on predicting) the deviation from scale invariance at that point. This deviation is called the spectral tilt, denoted $n_s(k^*)$, where $k^*$ is the value of $k$ at $N_*$. 
-
-Following the work of \citet{Wang+1997}, we determine the spectral index to first order in $\epsilon$:
+Figure \ref{fig:density_fluctuations} shows a schematic of the density fluctuations as a function of the wavenumber of the fluctuations ($\log k\sim\tfrac{1}{N}$). If the fluctuations were purely scale invariant, then the curve would be a horizontal line, the amplitude of the fluctuations independent of their wave number. Since current observations see only a very limited range near $N_*$, so they focus on measuring (and we focus on predicting) the deviation from scale invariance at that point. This deviation is called the spectral tilt, denoted $n_s(k^*)$, where $k^*$ is the value of $k$ at $N_*$. Following the work of \citet{Wang+1997}, we use an approximation of the spectral index to first order in $\epsilon$:
 \begin{equation}
-n_s \approx 1 - 2\epsilon - \frac{\d \ln(\epsilon)}{\d x} + \mathcal{O}(\epsilon^2)
+n_s \approx 1 - 2\epsilon - \frac{\d \ln(\epsilon)}{\d N} + \mathcal{O}(\epsilon^2),
+\label{eqn:ns_def}
 \end{equation}
+where the equation of state is treated as a function of the number of e-foldings instead of a function of time. 
+
+In addition to the spectral tilt at $N_*$, observations can also constrain the tensor-to-scalar power ratio, typically denoted $r$. The tensor-to-scalar ratio is typically computed in the slow-roll approximation (See Section \ref{ssec:SlowRoll} for more details), and we follow the conventions of \citet{Planck2013} to get 
+\begin{equation}
+r \approx 16 \epsilon.
+\end{equation}
+
 
 \subsection{Fine-tuning in an Inflationary Theory}
 Now that we have the basic mechanics of an inflationary theory, we see that defining an instance of an inflationary theory reduces to defining the inflationary potential $V(\phi)$. In order for inflation to be a predictive theory, we need to find a way to choose which potentials are reasonable and then find whether any of those potentials would generate a universe that conforms with observations. 
@@ -245,6 +261,7 @@ and the Klein-Gordon equation becomes
 \end{equation}
 
 \subsection{Slow Roll Approximation}
+\label{ssec:SlowRoll}
 In the slow roll approximation, we assume that $\dot \phi$ and $\ddot \phi$ are small. In order for this to be true, the inflationary potential must not be varying rapidly, leading us to the slow roll approximations:
 \begin{equation}
 \left | \frac{V'(\phi)}{V(\phi)} \right | <<1 \text{\ \ \ and\ \ \ } \left | \frac{V''(\phi)}{V(\phi)} \right | <<1 .
