@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    202449,       4107]
-NotebookOptionsPosition[    199623,       4016]
-NotebookOutlinePosition[    200017,       4033]
-CellTagsIndexPosition[    199974,       4030]
+NotebookDataLength[    202811,       4115]
+NotebookOptionsPosition[    199986,       4024]
+NotebookOutlinePosition[    200379,       4041]
+CellTagsIndexPosition[    200336,       4038]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3447,12 +3447,17 @@ Cell[BoxData[
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"\[Phi]sol2", "===", "\"\<n1 = 1/0\>\""}], ",", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"Print", "[", "\"\<.\>\"", "]"}], ";"}], "*)"}], 
           RowBox[{"nff", "=", 
            RowBox[{"nff", "+", "nfStep"}]}], ",", 
           RowBox[{"Break", "[", "]"}]}], "]"}], ";"}]}], 
       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"Print", "[", 
-      RowBox[{"\"\<nff = \>\"", ",", "nff"}], "]"}], ";", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\<nff = \>\"", ",", "nff"}], "]"}], ";"}], "*)"}], 
      "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
@@ -3497,7 +3502,10 @@ Cell[BoxData[
    3.6368200675428658`*^9}, {3.636820128153483*^9, 3.636820182030118*^9}, {
    3.6368202420321617`*^9, 3.636820256548716*^9}, {3.636820296303154*^9, 
    3.6368203498519297`*^9}, {3.636820505469842*^9, 3.63682051711587*^9}, {
-   3.636820547615448*^9, 3.6368205654824*^9}}],
+   3.636820547615448*^9, 3.6368205654824*^9}, {3.636899953429926*^9, 
+   3.636899959225286*^9}, {3.63690346176062*^9, 3.636903464001205*^9}, {
+   3.636903576309094*^9, 3.636903582553402*^9}, {3.6369051343154297`*^9, 
+   3.6369051507479897`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -4016,7 +4024,7 @@ Cell[BoxData[
 },
 ScreenStyleEnvironment->"Condensed",
 WindowSize->{721, 803},
-WindowMargins->{{55, Automatic}, {Automatic, 0}},
+WindowMargins->{{9, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
 2014)",
 StyleDefinitions->"Default.nb"
@@ -4104,9 +4112,9 @@ Cell[CellGroupData[{
 Cell[162965, 3250, 137, 1, 32, "Subsection"],
 Cell[163105, 3253, 2743, 70, 184, "Input"],
 Cell[165851, 3325, 3841, 90, 203, "Input"],
-Cell[169695, 3417, 4443, 82, 223, "Input"],
-Cell[174141, 3501, 10547, 195, 204, "Input"],
-Cell[184691, 3698, 14904, 314, 518, "Input"]
+Cell[169695, 3417, 4806, 90, 189, "Input"],
+Cell[174504, 3509, 10547, 195, 204, "Input"],
+Cell[185054, 3706, 14904, 314, 518, "Input"]
 }, Open  ]]
 }, Open  ]]
 }
