@@ -579,46 +579,105 @@ Figure \ref{fig:LFP_tanh_drift_detail} shows the drift in the \nsr plane due to 
 	\centering
 	\includegraphics[width=\textwidth]{figures/Tanh_V_ns_eps_grid.pdf}
 	\caption[Grid of plots showing $V$, $\epsilon$, and $n_s$ for the perturbed Tanh potentials.]{A grid of plots showing $V$, $\epsilon$, and $n_s$ for the Tanh potential with increasing amounts of perturbation. The potentials used correspond to the ones marked in Figure \ref{fig:LFP_tanh_drift_detail}. The two dots on the potential plot show the $N=0$ (left) and $N=80$ (right) marks.}
-	\label{fig:LFP_tanh_drift}
+	\label{fig:LFP_tanh_grid}
 \end{figure}
 
-These large drifts in the \nsr plane lead us to the question of what physically is happening to the potential, the equation of state, and the spectral index as the potential is increasingly perturbed. Figure \ref{fig:LFP_tanh_drift} shows a grid of plots showing $V(\phi)$, $\epsilon(N)$, and $n_s(N)$ for the Tanh potentials marked in Figure \ref{fig:LFP_tanh_drift_detail}. In the plots of $V$, the $N=0$ and $N=80$ positions are marked with circles. The first row shows the results for a pure Tanh potential, with a plateau flat all the way out to infinity. In this case $\epsilon$ monotonically drops off towards zero and $n_s$ monotonically increases just past one. Adding a monomial perturbing function disrupts the flat plateau, making it hook upwards. As the perturbation amplitude increases, the 80-efold mark creeps up onto the slope dominated by the perturbing function. This means that a significant portion of inflation is occuring in a power-law regime instead of a Tanh regime. The transition between these two regimes introduces ``wiggles'' into the equation of state and the spectral index. Notice how in the second row the equation of state warps back upward beginning at about the 40 e-fold mark. This indicates that the potential has begun to slop upward from the flat plateau. As the perturbation amplitude increases further, the equation of state shows two distinct extrema. The second extrema (the local maximum) occurs when the field moves past the ``transition'' segment and into the segment dominated by the perturbation. Note that the equation of state is plotted on a log scale, so the ``wiggles'' are quite dramatic. Since the spectral index is related to $\epsilon$ via its derivative, the perturbations also induce 
+These large drifts in the \nsr plane lead us to the question of what physically is happening to the potential, the equation of state, and the spectral index as the potential is increasingly perturbed. Figure \ref{fig:LFP_tanh_drift} shows a grid of plots showing $V(\phi)$, $\epsilon(N)$, and $n_s(N)$ for the Tanh potentials marked in Figure \ref{fig:LFP_tanh_drift_detail}. In the plots of $V$, the $N=0$ and $N=80$ positions are marked with circles. The first row shows the results for a pure Tanh potential, with a plateau flat all the way out to infinity. In this case $\epsilon$ monotonically drops off towards zero and $n_s$ monotonically increases just past one. Adding a monomial perturbing function disrupts the flat plateau, making it hook upwards. As the perturbation amplitude increases, the 80-efold mark creeps up onto the slope dominated by the perturbing function. This means that a significant portion of inflation is occuring in a power-law regime instead of a Tanh regime. The transition between these two regimes introduces ``wiggles'' into the equation of state and the spectral index. Notice how in the second row the equation of state warps back upward beginning at about the 40 e-fold mark. This indicates that the potential has begun to slop upward from the flat plateau. As the perturbation amplitude increases further, the equation of state shows two distinct extrema. The second extrema (the local maximum) occurs when the field moves past the ``transition'' segment and into the segment dominated by the perturbation. Note that the equation of state is plotted on a log scale, so the ``wiggles'' are quite dramatic. Since the spectral index is related to $\epsilon$ via its derivative, the perturbations also induce similar effects in $n_s$. 
+
+Therefore, the drift in the \nsr plane does in fact reflect significant physical changes in the system as opposed to mere numerical instabilities. As such, we proceed with the \nsr drift methodology to explore the fine tuning in different plateau models of inflation. 
 
 
 \subsection{\nsr Drift for Plateau Models}
 \label{ssec:DriftResults}
 
-\begin{figure}[h!]
+Figure \ref{fig:LFP_Tanh_drift} shows the drift in the \nsr plane from potentials of the form $V(\phi)=a\phi^4+\tanh(b\phi)$, where $a$ is a small perturbation amplitude and $b$ is a free parameter in the Tanh model. For all calculations, we first vacuum shifted and rescaled to put the vacuum at zero and the plateau at 1. We ensure that the plateau is at $1$ by first solving for $\phi_s(N)$ for the unperturbed potential and then dividing the perturbed potential by $\phi_s(60)$. In the plot, the small-dash curve corresponds to $b=1$ (the same as in Figure \ref{fig:LFP_tanh_drift_detail}), the medium-dash curve corresponds to $b=1.5$, and the large-dash corresponds to $b=2$. All models exhibit the same drifting behavior, with higher values of $b$ and smaller initial values of $r$ corresponding to larger drift in $n_s$. 
+
+Figure \ref{fig:LFP_Log_drift} shows the drift for potentials of the form $V(\phi)=1+\tfrac{0.01}{\phi^2}+a\phi^4+b\log(\phi)$. As discussed in Section \ref{ssec:LargeField}, in order to ensure that inflation ends we must force the potential to have a lower bound. We do this by adding the term $\tfrac{0.01}{\phi^2}$, which puts a minimum at $\phi=0$. Note that the curves do not drift nearly as much as they do in the Tanh model in Figure \ref{fig:LFP_Tanh_drift}. In fact, we note the trend that potentials that begin at an unperturbed \nsr point that is further from the $\phi^4$ point will drift out to larger values on the $n_s$ axis. 
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Tanh_final.pdf}
-	\caption[Drift in \nsr plane for Tanh model with perturbations.]{A plot showing the drift in the \nsr plane as a Log model, $V=1+\tanh(\phi)$, is perturbed with a $\phi^4$ potential. The purple circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Tanh potentials.}
+	\caption[Drift in \nsr plane for Tanh model with perturbations.]{A plot showing the drift in the \nsr plane as a Tanh model, $V=1+\tanh(\phi)$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Tanh potentials.}
 	\label{fig:LFP_Tanh_drift}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Log_final.pdf}
-	\caption[Drift in \nsr plane for Log model with perturbations.]{A plot showing the drift in the \nsr plane as a Log model, $V=1+\tfrac{0.01}{x^2}+\log(\phi)$, is perturbed with a $\phi^4$ potential. The purple circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Log potentials. Note that the $\tfrac{0.01}{x^2}$ term is added to give the potential a lower bound and hence make it an acceptable model of inflation.}
+	\caption[Drift in \nsr plane for Log model with perturbations.]{A plot showing the drift in the \nsr plane as a Log model, $V=1+\tfrac{0.01}{x^2}+\log(\phi)$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Log potentials. Note that the $\tfrac{0.01}{x^2}$ term is added to give the potential a lower bound and hence make it an acceptable model of inflation.}
 	\label{fig:LFP_Log_drift}
 \end{figure}
+
+This trend becomes even more apparent when we examine Figure \ref{fig:LFP_Rsq_drift}, which shows the drift in the \nsr plane due to $\phi^4$ perturbations of the Starobinsky model, $V=(1-e^{-b\sqrt{2/3}\phi})^2$. In the plot, small-dash denotes $b=0.01$, medium-dash denotes $b=0.1$, and large-dash denotes $b=1$. Again, the further the unperturbed potential is from the perturbing function, the farther it drifts when perturbed. This is concerning because \citet{Planck2015} data points to a very small value of $r$, which will push the observationally-acceptable models further from a monomial perturbing function. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Rsq_final.pdf}
-	\caption[Drift in \nsr plane for Starobinsky model with perturbations.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with a $\phi^4$ potential. The purple circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Starobinsky potentials.}
+	\caption[Drift in \nsr plane for Starobinsky model with perturbations.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Starobinsky potentials.}
 	\label{fig:LFP_Rsq_drift}
 \end{figure}
+
+We can quantify this effect by measuring the distance from the perturbing function and maximum amount of drift (measured from the initial, non-perturbed point). Figure \ref{fig:LFP_drift_distance} shows the maximum drift distance as a function of the initial distance from the non-perturbed point to the point corresponding to the perturbing function. The points are colored according to the model used, using the same scheme as in the previous figures: red for the Tanh models, blue for the Log models, and green for the Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, which we measure two different ways. The square points measure the distance from the unperturbed point to the point on the curve with maximum value of $n_s$. The circle points measure the distance from the unperturbed point to the point on the curve with minimum value of $n_s$. Both methods of measuring the drift distance show the same result, as would be expected from examining the drift curves of the models. We see that 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{figures/LFP_drift_distance_final.pdf}
+	\caption[Drift distance vs initial distance.]{A plot showing the drift distance in the \nsr plane as a function of the initial distance from the non-perturbed point to the point of the perturbing function. The color scheme is the same as in Figures \ref{fig:LFP_Rsq_drift}, \ref{fig:LFP_Log_drift}, and \ref{fig:LFP_Tanh_drift}, with red shades denoting Tanh models, blue shades denoting Log models, and green shades denoting Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, measured two different ways, corresponding to the square and circle points. The square/circle points mark the distance from the unperturbed point to the point on the curve with maximum/minimum value of $n_s$.} 
+	\label{fig:LFP_drift_distance}
+\end{figure}
+
+%\begin{table}[htbp]
+%   \centering
+%   \begin{tabular}{@{} l  c  c @{}} % Column formatting, @{} suppresses leading/trailing space
+%      \toprule
+%      Model & Planck Crossing ($n_s=0.977$) &  $n_s=1$ Crossing \\
+%      \midrule
+%      $V(\phi)=\tanh(\phi)+a\phi^4$ & $2.7\times10^{-5}$ & $8.0\times10^{-5}$ \\
+%      $V(\phi)=\tanh(1.5\phi)+a\phi^4$ & $4.2\times10^{-5}$ & $1.3\times10^{-5}$ \\
+%      $V(\phi)=\tanh(2\phi)+a\phi^4$ & $6.2\times10^{-5}$ & $1.9\times10^{-5}$ \\
+%      \midrule
+%      $V(\phi)=\log(\phi)+\tfrac{0.01}{\phi^2}+a\phi^4$ & $$ & $7.8\times10^{-5}$ \\
+%      \midrule
+%      $V=(1-e^{-0.1\sqrt{2/3}\phi})^2 + a\phi^4$ & $\times10^{-}$ & $\times10^{-}$ \\
+%      $V=(1-e^{-0.5\sqrt{2/3}\phi})^2 + a\phi^4$ & $\times10^{-}$ & $\times10^{-}$ \\
+%      $V=(1-e^{-\sqrt{2/3}\phi})^2 + a\phi^4$ & $1.0\times10^{-5}$ & $3.0\times10^{-5}$ \\
+%      $V=(1-e^{-2\sqrt{2/3}\phi})^2 + a\phi^4$ & $\times10^{-}$ & $\times10^{-}$ \\
+%      \bottomrule
+%   \end{tabular}
+%   \caption{The values of the perturbation amplitude $a$ at the point where the drift curve crosses out of the \citet{Planck2015} constraint contour and when it crosses past $n_s=1$.}
+%   \label{tab:drift_crossings}
+%\end{table}
+
 
 \FloatBarrier
 \subsection{Results for varying perturbing model}
 \label{ssec:DriftVaryAf}
 
+In sections \ref{ssec:TanhCaseStudy} and \ref{ssec:DriftResults}, we explored how perturbing the potential with a $\phi^4$ potential caused significant drift in the \nsr plane. In this section we investigate how the drift curves change as we vary the perturbing function, specifically by increasing the power of the monomial perturbation. Figure \ref{fig:LFP_Rsq_drift_af} shows a drift plot in the \nsr plane for the Starobinsky model with varying powers of perturbation. The small-dash line shows the $\phi^4$ perturbation that we explored previously. The medium-dash line shows a $\phi^6$ perturbation, and the long-dash line shows a $\phi^8$ perturbation. Notice that the $n_s$ axis had to be extended from the previous figures' scale to accommodate the $\phi^8$ perturbation's drift curve. This trend shows us that higher power perturbations induce larger amounts of drift. This is concerning since we can imagine arbitrarily large powers of perturbations and hence higher order perturbations are more likely. \mep{Can I actually say this?} 
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Rsq_varyaf_final.pdf}
-	\caption[Drift in \nsr plane for Starobinsky model with increasing perturbing power.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with monomial potentials of increasing power. The purple circle marks the location of a pure $\phi^4$ potential, and the black circle marks the pure Starobinsky potential. Note that the higher power perturbations produce larger drift.}
-	\label{fig:LFP_Rsq_varyaf_drift}
+	\caption[Drift in \nsr plane for Starobinsky model with perturbations.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Starobinsky potentials. The blue swatch is the \citet{Planck2015} constraint contour for the TT, TE, EE, and lowP data.}
+	\label{fig:LFP_Rsq_drift_af}
 \end{figure}
+
+Another way to compare the effects of the perturbation is to examine the amplitude of perturbation necessary for the curve to pass beyond the \citet{Planck2015} contours or for it to cross past $n_s=1$. Since the values of $n_s$ are so small ($<0.01$), for our purposes passing beyond the Planck contour can be approximated as passing beyond the line $n_s=0.977$. Table \ref{tab:crossings_vary_af} shows the perturbation amplitudes $a$ required to cross beyond the Planck contour and beyond the line $n_s=1$. Worryingly, by the time we get to a $\phi^8$ perturbation, it only takes a perturbation of the order $10^{-9}$ to push the potential outside of the Planck contour. This indicates that plateau models are highly sensitive to higher order perturbations. Therefore, there must be an incredible degree of fine-tuning to an infinite number of non-zero terms. 
+
+\begin{table}[htbp]
+   \centering
+   \begin{tabular}{@{} l  c  c @{}} % Column formatting, @{} suppresses leading/trailing space
+      \toprule
+      Model & Planck Crossing ($n_s=0.977$) &  $n_s=1$ Crossing \\
+      \midrule
+      $V=(1-e^{-\sqrt{2/3}\phi})^2 + a\phi^4$ & $1.0\times10^{-5}$ & $3.0\times10^{-5}$ \\
+       $V=(1-e^{-\sqrt{2/3}\phi})^2 + a\phi^6$ & $1.5\times10^{-7}$ & $4.5\times10^{-7}$ \\
+       $V=(1-e^{-\sqrt{2/3}\phi})^2 + a\phi^8$ & $2.7\times10^{-9}$ & $1.0\times10^{-8}$ \\
+      \bottomrule
+   \end{tabular}
+   \caption{The values of the perturbation amplitude $a$ at the point where the drift curve crosses out of the \citet{Planck2015} constraint contour and when it crosses past $n_s=1$.}
+   \label{tab:crossings_vary_af}
+\end{table}
 
 
 
