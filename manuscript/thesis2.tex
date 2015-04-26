@@ -14,9 +14,9 @@
 \usepackage[section]{placeins} % use the command \FloatBarrier to keep figures from migrating too far
 
 \usepackage{titlesec} % for changing formatting of sections
-\titleformat{\section}{\normalfont\huge\bfseries\raggedright}{\thesection}{1em}{} 
+\titleformat{\section}{\normalfont\huge\scshape\raggedright}{\thesection}{1em}{} 
 %\raggedright gets rid of hyphenation in section titles
-\titleformat{\subsection}{\normalfont\Large\bfseries\raggedright}{\thesubsection}{1em}{}
+\titleformat{\subsection}{\normalfont\Large\raggedright}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
 
 \usepackage{indentfirst} % include to indent the first paragraphs after a section 
@@ -188,10 +188,6 @@ I would like to dedicate my thesis to my family -- both in Illinois and here at 
 
 \linespread{1.6} % spacing for rest of document
 
-\pagenumbering{arabic}
-%\subsection{Outline}
-\small % for some reason this needs to be here for the double spacing to work.....
-
 %\newpage
 %\section{General Outline of Thesis}
 %\begin{itemize}
@@ -234,21 +230,22 @@ I would like to dedicate my thesis to my family -- both in Illinois and here at 
 %		Introduction	
 %%%%%%%%%%%%%%%%%%%
 \newpage
+\pagenumbering{arabic}
+\small % for some reason this needs to be here for the double spacing to work.....
+
 \section{Introduction}
-\subsection{How to describe an inflationary theory}
+\subsection{Language of Inflationary Theory}
 \label{sec:GeneralDescription}
 The Standard Model that describes all of fundamental physics consists of many different fields (e.g. scalar, vector, Fermion, Boson) and interactions between the given fields. These are put together into a giant universe-encompassing Lagrangian, which then determines all possible interactions. An inflationary theory adds a scalar field $\phi$ and accompanying potential $V(\phi)$ to the Standard Model Lagrangian in order to facilitate the drastic expansion required in the early universe. For values of $\phi$ where the potential is large, the inflationary field encourages the expansion of the universe; when the potential is zero, then the inflationary field does not contribute to expansion. 
 
-As an example, consider the potential in Figure \ref{fig:MexHatCartoon}, which shows a potential colloquially called the ``Mexican hat'' potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. For this potential, the extremum at $\phi=0$ is referred to as the false vacuum. At this value of the field, the universe is inflating. However, since the false vacuum is unstable, the field will ``roll down the hill'' of the potential and end up at the true vacuum, $\phi=\sigma$. When the inflationary field settles in the true vacuum (which is stable), the inflationary period ends. Potentials like this which have a false vacuum at $\phi=0$ are called hilltop models. For hilltop models, the inflationary period is dominated by inflation at small values of $\phi$. Hence, in a polynomial expansion of the field the lowest order terms will dominate. Thus, the potential will have only a handful of parameters (corresponding to the coefficients of the lowest order terms) requiring constraint. However, as will be discussed in Section \ref{PlankComparison}, such models do not reproduce observational results.
-
-Another type of inflationary potential, which happens to be the form most in line with current observations, is the plateau model, shown in Figure \ref{fig:PlateauCartoon}. In this inflationary scenario the field begins at a large value of $\phi$ where the potential is nearly flat. The field then rolls down the hill towards smaller values of $\phi$, with inflation ending when the potential levels off to zero. Plateau models are examples of large-field models, in which the inflationary period is dominated by inflation at large values of $\phi$. Unlike in the hilltop case, inflation in the large-field models depends heavily on the higher order terms of the potential's expansion. Since small perturbations in the higher order terms will result in drastically different behavior, the potential requires an infinite number of constraining parameters. We will explore the sensitivity of such models to higher-order perturbation in Section \ref{BLANK}, arguing that this sensitivity reveals an undesirable amount of fine-tuning in such models of inflation.
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/hilltop_cartoon.pdf}
 	\caption[Schematic illustration of a Hilltop Model]{A schematic illustration of a hilltop potential, using the example of a Mexican Hat potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. The red ball symbolizes the inflationary field at a given time. The field rolls down the hill of the potential and settles in the vacuum state where the potential is zero, causing inflation to end. Note that in this scenario, the most inflation occurs at small values of $\phi$ and hence any hilltop model can be reasonably approximated by the first few lowest order terms.}
 	\label{fig:MexHatCartoon}
 \end{figure}
+
+As an example, consider the potential in Figure \ref{fig:MexHatCartoon}, which shows a potential colloquially called the ``Mexican hat'' potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. For this potential, the extremum at $\phi=0$ is referred to as the false vacuum. At this value of the field, the universe is inflating. However, since the false vacuum is unstable, the field will ``roll down the hill'' of the potential and end up at the true vacuum, $\phi=\sigma$. When the inflationary field settles in the true vacuum (which is stable), the inflationary period ends. Potentials like this which have a false vacuum at $\phi=0$ are called hilltop models. For hilltop models, the inflationary period is dominated by inflation at small values of $\phi$. Hence, in a polynomial expansion of the field the lowest order terms will dominate. Thus, the potential will have only a handful of parameters (corresponding to the coefficients of the lowest order terms) requiring constraint. However, as will be discussed in Section \ref{sec:Planck}, such models do not reproduce observational results.
 
 \begin{figure}[h]
 	\centering
@@ -256,6 +253,8 @@ Another type of inflationary potential, which happens to be the form most in lin
 	\caption[Schematic illustration of a Plateau Model]{A schematic illustration of a plateau potential. The red ball symbolizes the inflationary field at a given time. The field rolls down the hill of the potential and settles in the vacuum state where the potential is zero, causing inflation to end. Note that in this scenario, the most inflation occurs at large values of $\phi$. Therefore, unlike in the hilltop case, the highest order terms will dominate.}
 	\label{fig:PlateauCartoon}
 \end{figure}
+
+Another type of inflationary potential, which happens to be the form most in line with current observations, is the plateau model, shown in Figure \ref{fig:PlateauCartoon}. In this inflationary scenario the field begins at a large value of $\phi$ where the potential is nearly flat. The field then rolls down the hill towards smaller values of $\phi$, with inflation ending when the potential levels off to zero. Plateau models are examples of large-field models, in which the inflationary period is dominated by inflation at large values of $\phi$. Unlike in the hilltop case, inflation in the large-field models depends heavily on the higher order terms of the potential's expansion. Since small perturbations in the higher order terms will result in drastically different behavior, the potential requires an infinite number of constraining parameters. We will explore the sensitivity of such models to higher-order perturbation in Section \ref{sec:LFP}, arguing that this sensitivity reveals an undesirable amount of fine-tuning in such models of inflation.
 
 The main purpose of an inflationary theory is to provide a mechanism to explain the homogeneity, isotropy, and flatness of the universe. As such, it is useful to look at the production of density perturbations during the inflationary period. During inflation, the magnitude of the density perturbations are inversely proportional to $\dot \phi$. Consequently, in regions where the potential is approximately constant, the perturbations would be unacceptably large. However, steeply-sloped potentials would cause the field to roll off the hill and end inflation before enough expansion took place. Therefore, there is a balancing game to be played in picking potentials. 
 
@@ -499,6 +498,7 @@ To summarize our numerical method, first we use the slow roll to approximate $\p
 %%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Current Status of Models and Observation}
+\label{sec:Planck}
 
 \subsection{Current Observations}
 To date, a myriad of potentials have been proposed as possible models of inflation. We use the numerical methods described in Section \ref{sec:methods} to find the observational predictions of the most prominent classes of proposed models and we compare these theoretical results to the observational results of \citet{Planck2015}. 
@@ -514,48 +514,105 @@ Figure \ref{fig:Planck} shows a plot on the \nsr plane of the theoretical predic
 
 \subsection{Small Field Models}
 \label{ssec:SmallField}
-\subsubsection{Monomial Models}
-\label{sssec:Mono}
-The simplest models of inflationary potentials are monomial power laws: $V(\phi)=\lambda\phi^n$, for some positive $n$. These models, specifically the $\phi^4$ model, were first explored by \citet{Linde1983} as an example of chaotic inflation. Monomial models are large-field models (meaning that the inflationary field begins at large values of $\phi$ and rolls down the hill to a vacuum at a smaller value of $\phi$. For the monomial models, the vacuum state is at $\phi=0$. Note that for potentials where $n$ is not an even integer there is no minimum value of the potential and hence no vacuum state. Potentials that are not bounded below are problematic because inflation ends when the inflationary field settles in the vacuum state. Without a stable vacuum state, the inflationary field will enter a negative regime of the potential, and the universe will collapse. However, it is still instructive to examine these unbounded models since they can still serve as upper limits on other classes of models, such as $V=\lambda\phi$ for the Hilltop models (see Section \ref{sssec:Hilltop}).
 
 \subsubsection{Polynomial Hilltop Models}
 \label{sssec:Hilltop}
-Another class of simple inflationary models is the set of polynomial hilltop potentials. We examined two different forms for these potentials, a ``Mexican Hat'' form, $V(\phi)=\lambda(\phi^2-\sigma^2)^2$, and a quadratic form, $V(\phi)=\lambda(1-(\tfrac{\phi}{\mu})^2)$ \citep{Boubekeur+Lyth2005}. Both of these models belong to the class of small field inflationary models, in which inflation begins at small values of $\phi$ and rolls down the hill to a vacuum at a larger value of $\phi$. Whenever doing calculations with these models, we first shift the potential so that the false vacuum (the minimum of the potential) falls at $V=0$. As discussed previously, this ensures that inflation ends. 
+Perhaps the simplest class of small field inflationary models is the set of polynomial hilltop potentials. We examined two different forms for these potentials, a ``Mexican Hat'' form, 
+\begin{equation}
+V(\phi)=\lambda(\phi^2-\sigma^2)^2,
+\end{equation} 
+and a quadratic form, 
+\begin{equation}
+V(\phi)=\lambda(1-(\tfrac{\phi}{\mu})^2)
+\end{equation} 
+\citep{Boubekeur+Lyth2005}. Both of these models belong to the class of small field inflationary models, in which inflation begins at small values of $\phi$ and rolls down the hill to a vacuum at a larger value of $\phi$. Whenever doing calculations with these models, we first shift the potential so that the false vacuum (the minimum of the potential) falls at $V=0$. As discussed previously, this ensures that inflation ends. 
 
 For large values of $\sigma$, the $n_s$ and $r$ values for the Mexican hat potential converge on the values for the monomial $\phi^2$ potential. This is expected since large values of $\sigma$ will cause the $-2\sigma^2\phi^2$ term to dominate over the $\phi^4$ term, and shifting the potential minimum to $V=0$ will offset the increase in the $\sigma^4$ term. For large value of $\mu$, the $n_s$ and $r$ values for the quadratic form converge on the linear $V\propto \phi$ model. 
 
 \subsubsection{Natural Inflation Model}
-Natural inflation, $V(\phi)=\lambda(1+\cos(\tfrac{\phi}{a}))$, is another form of a hilltop model \citep{Adams+1993}. It is theoretically motivated as a mechanism for inflation in which the inflationary period ends for $\phi\gg M_{pl}$, which is $1$ in our units. In the particle theory behind natural inflation, $\phi$ is a pseudo-Nambu-Goldstone boson with a periodic potential and a scale of spontaneous symmetry breaking that is much greater than $M_{pl}$ \citep{Boubekeur+Lyth2005}. For large values of $a$, the results for natural inflation converge on the results for a second degree monomial, $V\propto\phi^2$, similar to the case of the Mexican hat potential. Again, this is expected due to the series expansion of the cosine. 
+Natural inflation is another form of a hilltop model and takes the form:
+\begin{equation}
+V(\phi)=\lambda(1+\cos(\tfrac{\phi}{a}))
+\end{equation}
+\citep{Adams+1993}. It is theoretically motivated as a mechanism for inflation in which the inflationary period ends for $\phi\gg M_{pl}$, which is $1$ in our units. In the particle theory behind natural inflation, $\phi$ is a pseudo-Nambu-Goldstone boson with a periodic potential and a scale of spontaneous symmetry breaking that is much greater than $M_{pl}$ \citep{Boubekeur+Lyth2005}. For large values of $a$, the results for natural inflation converge on the results for a second degree monomial, $V\propto\phi^2$, similar to the case of the Mexican hat potential. Again, this is expected due to the series expansion of the cosine. 
 
 \subsection{Large Field Models}
 \label{ssec:LargeField}
+
+\subsubsection{Monomial Models}
+\label{sssec:Mono}
+The simplest large field models of inflationary potentials are monomial power laws: 
+\begin{equation}
+V(\phi)=\lambda\phi^n,
+\end{equation} 
+for some positive $n$. These models, specifically the $\phi^4$ model, were first explored by \citet{Linde1983} as an example of chaotic inflation. Monomial models are large-field models (meaning that the inflationary field begins at large values of $\phi$ and rolls down the hill to a vacuum at a smaller value of $\phi$. For the monomial models, the vacuum state is at $\phi=0$. Note that for potentials where $n$ is not an even integer there is no minimum value of the potential and hence no vacuum state. Potentials that are not bounded below are problematic because inflation ends when the inflationary field settles in the vacuum state. Without a stable vacuum state, the inflationary field will enter a negative regime of the potential, and the universe will collapse. However, it is still instructive to examine these unbounded models since they can still serve as upper limits on other classes of models, such as $V=\lambda\phi$ for the Hilltop models (see Section \ref{sssec:Hilltop}).
+
 \subsubsection{Exponential Model}
-Exponential inflation, $V(\phi)=\lambda(1-e^{-q\phi})$, was first proposed by \citet{Goncharov+Linde1984} as a chaotic inflation model derived from the framework of $N=1$ supergravity, and has recurred many times in inflationary models grounded in other theories of supergravity and string theory. For small values of $q$, the model converges on the results for the linear monomial, as expected from the series expansion of the exponential. Note that, as for many of the monomial potentials, the exponential potential is not bounded below. It is possible to fix this without significantly upsetting the behavior of the system during inflation by adding a small term such as $\tfrac{0.01}{x^2}$ to the potential. This gives the potential a minimum which we can then shift to occur at $V=0$. 
+Exponential inflation was first proposed by \citet{Goncharov+Linde1984} as a chaotic inflation model derived from the framework of $N=1$ supergravity, and has recurred many times in inflationary models grounded in other theories of supergravity and string theory. Its potential takes the form
+\begin{equation}
+V(\phi)=\lambda(1-e^{-q\phi}).
+\end{equation} 
+For small values of $q$, the model converges on the results for the linear monomial, as expected from the series expansion of the exponential. Note that, as for many of the monomial potentials, the exponential potential is not bounded below. It is possible to fix this without significantly upsetting the behavior of the system during inflation by adding a small term such as $\tfrac{0.01}{x^2}$ to the potential. This gives the potential a minimum which we can then shift to occur at $V=0$. 
 
 \subsubsection{D-brane Models}
-Another breed of large field models, called D-brane models, take the form $V(\phi)=\lambda(1-(\tfrac{a}{\phi})^p)$ for some positive integer $p$, usually taken to be 2 \citep{Garcia+2002} or 4 \citep{Dvali+Tye1999}. D-brane models originate from extra-dimensional physics in which brane/anti-brane interaction drives inflation. Interestingly, we found that the power $p$ does not effect the \nsr coverage of the model. In Figure \ref{fig:Planck}, the D-brane model data used $p=1,\ 2,\ 3,\ 4$. The D-brane models do not particularly converge to any monomial, although their coverage does include the linear monomial. As in the case of the exponential potential, we must add a small term to the potential to give it a minimum and hence ensure the end of inflation.
+Another breed of large field models, called D-brane models, take the form 
+\begin{equation}
+V(\phi)=\lambda(1-(\tfrac{a}{\phi})^p)
+\end{equation} 
+for some positive integer $p$, usually taken to be 2 \citep{Garcia+2002} or 4 \citep{Dvali+Tye1999}. D-brane models originate from extra-dimensional physics in which brane/anti-brane interaction drives inflation. Interestingly, we found that the power $p$ does not effect the \nsr coverage of the model. In Figure \ref{fig:Planck}, the D-brane model data used $p=1,\ 2,\ 3,\ 4$. The D-brane models do not particularly converge to any monomial, although their coverage does include the linear monomial. As in the case of the exponential potential, we must add a small term to the potential to give it a minimum and hence ensure the end of inflation.
 
 \subsubsection{Logarithmic (SUSY) Models}
-A logarithmic potential, $V(\phi)=\lambda(1+a\log(\phi))$, can be generated by loop corrections in spontaneously broken supersymmetric (SUSY) grand unified theories \citep{Dvali+1994}. Once again, we must add a term to the potential for the end of inflation. 
+A logarithmic potential, which has a potential of the form 
+\begin{equation}
+V(\phi)=\lambda(1+a\log(\phi)),
+\end{equation} 
+can be generated by loop corrections in spontaneously broken supersymmetric (SUSY) grand unified theories \citep{Dvali+1994}. Once again, we must add a term to the potential for the end of inflation. 
 
 
 \subsubsection{Starobinsky and Shaposhnikov's Models}
-Two of the most promising models of inflation which fall entirely within \citet{Planck2015}'s $95\%$ constraints are Starobinsky's $R^2$ model, $V(\phi)=\lambda\left(1-e^{-\sqrt{2/3}\phi}\right)^2$, and Shaposhnikov's model, $V(\phi)=\lambda \left(1+e^{-\sqrt{2/3}\phi}\right)^{-2}$. Starobinsky's model is derived from one-loop corrections to conformally covariant matter fields, which then can admit nonsingular isotropic and homogeneous solutions which produce a universe in a state of de Sitter expansion \citep{Starobinsky1980}. Shaposhnikov's model is derived from introducing a non-minimal coupling of the Higgs scalar field to gravity \citep{Bezrukov+Shaposhnikov2008}. Although the series expansions of these two models are quite different (e.g. Shaposhnikov's model begins at the second order term while Starobinsky's model has zeroth and first order terms as well.), the models' results end up very close to each other on the \nsr plane.
+Two of the most promising models of inflation which fall entirely within \citet{Planck2015}'s $95\%$ constraints are Starobinsky's $R^2$ model, 
+\begin{equation}
+V(\phi)=\lambda\left(1-e^{-\sqrt{2/3}\phi}\right)^2,
+\end{equation} 
+and Shaposhnikov's model, 
+\begin{equation}
+V(\phi)=\lambda \left(1+e^{-\sqrt{2/3}\phi}\right)^{-2}.
+\end{equation} 
+Starobinsky's model is derived from one-loop corrections to conformally covariant matter fields, which then can admit nonsingular isotropic and homogeneous solutions which produce a universe in a state of de Sitter expansion \citep{Starobinsky1980}. Shaposhnikov's model is derived from introducing a non-minimal coupling of the Higgs scalar field to gravity \citep{Bezrukov+Shaposhnikov2008}. Although the series expansions of these two models are quite different (e.g. Shaposhnikov's model begins at the second order term while Starobinsky's model has zeroth and first order terms as well.), the models' results end up very close to each other on the \nsr plane.
 
 \FloatBarrier
 %%%%%%%%%%%%%%%%%%%
 %			Latham	
 %%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Quantifying Fine-tuning in Polynomial Potentials}
-\subsection{Discussion of Latham's paper}
-\subsection{My Results}
+\section{Current Methods of Quantifying Fine Tuning}
+\label{sec:Latham}
+
+One persistent problem in inflationary theory that has generated much discussion is the problem of fine tuning. Although it is such a pervasive topic, the concept of fine-tuning is not very well defined, having multiple definitions relevant to different aspects of inflationary models. One manifestation of fine-tuning is in the smallness of constants within the inflationary model. For example, a potential of the form $V(\phi)=\tfrac{m}{2}\phi^2$ has to have $m \ll 10^{-11} M_{Pl}$ in order to conform with the observed perturbation amplitudes $\tfrac{\delta \rho}{\rho}\sim 10^{-4}$ at $\phi_{60}$.\footnote{This value was computed using $\tfrac{V''(\phi_{60})}{V(\phi_{60})}=\tfrac{1}{60}$ to solve for $\phi_{60}$ and then using $\tfrac{\delta\rho}{\rho}=\tfrac{V(\phi_{60})^{3/2}}{V'(\phi_{60})}\sim10^{-4}$ to solve for $m$ in units of the Planck mass $M_{Pl}$.} Having a mass parameter this small but still non-zero is very peculiar and thus this model is called ``fine-tuned.'' Another way to look at fine tuning is to consider the functional complexity of the evolution of physical parameters, such as the equation of state $\epsilon$. In this section we will review the work done by \citet{Boyle+2006} on quantifying such a measure of fine-tuning in polynomial potentials in preparation for proposing a new method for quantifying fine-tuning in plateau models. 
+
+\subsection{Quantifying Fine Tuning in Polynomial Potentials}
+
+The method for quantifying fine-tuning proposed by \citet{Boyle+2006} examines the complexity of the equation of state $\epsilon$ generated by a given potential. The motivation for using such a scheme is the realization that many inflationary potentials are only able to achieve \nsr values consistent with observations by introducing unnecessary features into the equation of state. These features are a form of fine-tuning because they introduce artificial forces and jerks right around the observational point, $N=60$. Boyle's method is as follows: 1) Solve the Klein-Gordon equation for $\phi(N)$, 2) Plug the solution $\phi(N)$ into the equation for the slow roll parameters $\epsilon$ and $\eta$, and 3) Count the zeroes in each function and its derivatives. This number, $Z_{\epsilon,\eta}$ is the degree of fine-tuning of the model. 
+
+Figure \ref{fig:Latham} (adapted from \citet{Boyle+2006}) shows the results of the zero-counting method for polynomial potentials. Each colored swath represents the range in the \nsr plane covered by polynomial models with the degree of fine-tuning $Z_{\eta}$. The area inside the solid black curve contains all the models with degrees of fine-tuning $Z_{\eta}=0$ or 1. The small white circles denote monomial potentials: $\phi^4$, $\phi^3$, and $\phi^2$, from left to right. The hashed region contains potentials whose polynomial degree is greater than four but whose fine-tuning degree is zero. The red contour lines were added to compare \citet{Boyle+2006}'s results with the \citet{Planck2015} constraints. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/LathamFigurePlanck.pdf}
+	\caption[Plot of \nsr coverage of polynomial models showing fine-tuning]{A plot in the \nsr plane of the observational predictions of polynomial models. The coloring tells how many zeros there are in the equation of state $\epsilon$ and its derivatives (with respect to $N$). This figure is adapted from \citet{Boyle+2006}. The red contour lines were added to depict the $68\%$ and $95\%$ confidence regions for Planck's combined TT, TE, EE, and lowP results.}
+	\label{fig:Latham}
+\end{figure}
+
+Noting in Figure \ref{fig:Latham} the extent of the region within the black line, which contains the models with zero or one degree of fine-tuning, we see that the simplest models encompass only a small region of the \nsr plane. Further, there is little overlap between the \citet{Planck2015} contours and the models with the smallest degree of fine-tuning, and it is likely that as the constrains become stronger and push $r$ to lower values there will ultimately be no overlap at all. This shows that in order to get to small values of the tensor-to-scalar ratio, we must introduce fine-tuned features into the equation of state. 
+
+    This method works well for discerning fine-tuning in the equation of state. However, the models that \citet{Boyle+2006} examines, namely polynomial models, are now generally disfavored by observations (see Section \ref{sec:Planck}). In the following section we will discuss a new method of examining the fine tuning in inflationary potentials that we apply to the large field models consistent with \citet{Planck2015} data.
 
 %%%%%%%%%%%%%%%%%%%
 %		Large Field Models	
 %%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Quantifying Fine-tuning in Large Field Potentials}
+\label{sec:LFP}
 
 While the zero-counting method works well to quantify the amount of fine-tuning in a polynomial model, we need another method to quantify the fine-tuning in the large field models, particularly the models with a plateau. For plateau models, we want to highlight the fact that in order to sustain a flat plateau out to infinity --- as most plateau models implicitly require --- we must constrain an infinite number of parameters (i.e. the coefficients of the series expansion of the model) to high precision. We do this by probing the sensitivity of the models to monomial perturbations. For each model we add a term $a\phi^p$ where $p$ is a power, typically taken to be 4 or above, and $a$ is a constant such that $a\ll 1$. We then track how the model's results move in the \nsr plane as $a$ increases. For a large enough value of $a$, the model will converge on the result for the potential $V(\phi)=\phi^p$. The amount of drift in the \nsr plane (e.g. how large $n_s$ and $r$ can become) and the value of $a$ at the maximum drift points can give us a measure for how sensitive the model is to large field perturbations. 
 
@@ -575,12 +632,13 @@ Figure \ref{fig:LFP_tanh_drift_detail} shows the drift in the \nsr plane due to 
 	\label{fig:LFP_tanh_drift_detail}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[P]
 	\centering
 	\includegraphics[width=\textwidth]{figures/Tanh_V_ns_eps_grid.pdf}
 	\caption[Grid of plots showing $V$, $\epsilon$, and $n_s$ for the perturbed Tanh potentials.]{A grid of plots showing $V$, $\epsilon$, and $n_s$ for the Tanh potential with increasing amounts of perturbation. The potentials used correspond to the ones marked in Figure \ref{fig:LFP_tanh_drift_detail}. The two dots on the potential plot show the $N=0$ (left) and $N=80$ (right) marks.}
 	\label{fig:LFP_tanh_grid}
 \end{figure}
+\FloatBarrier
 
 These large drifts in the \nsr plane lead us to the question of what physically is happening to the potential, the equation of state, and the spectral index as the potential is increasingly perturbed. Figure \ref{fig:LFP_tanh_drift} shows a grid of plots showing $V(\phi)$, $\epsilon(N)$, and $n_s(N)$ for the Tanh potentials marked in Figure \ref{fig:LFP_tanh_drift_detail}. In the plots of $V$, the $N=0$ and $N=80$ positions are marked with circles. The first row shows the results for a pure Tanh potential, with a plateau flat all the way out to infinity. In this case $\epsilon$ monotonically drops off towards zero and $n_s$ monotonically increases just past one. Adding a monomial perturbing function disrupts the flat plateau, making it hook upwards. As the perturbation amplitude increases, the 80-efold mark creeps up onto the slope dominated by the perturbing function. This means that a significant portion of inflation is occuring in a power-law regime instead of a Tanh regime. The transition between these two regimes introduces ``wiggles'' into the equation of state and the spectral index. Notice how in the second row the equation of state warps back upward beginning at about the 40 e-fold mark. This indicates that the potential has begun to slop upward from the flat plateau. As the perturbation amplitude increases further, the equation of state shows two distinct extrema. The second extrema (the local maximum) occurs when the field moves past the ``transition'' segment and into the segment dominated by the perturbation. Note that the equation of state is plotted on a log scale, so the ``wiggles'' are quite dramatic. Since the spectral index is related to $\epsilon$ via its derivative, the perturbations also induce similar effects in $n_s$. 
 
@@ -592,39 +650,44 @@ Therefore, the drift in the \nsr plane does in fact reflect significant physical
 
 Figure \ref{fig:LFP_Tanh_drift} shows the drift in the \nsr plane from potentials of the form $V(\phi)=a\phi^4+\tanh(b\phi)$, where $a$ is a small perturbation amplitude and $b$ is a free parameter in the Tanh model. For all calculations, we first vacuum shifted and rescaled to put the vacuum at zero and the plateau at 1. We ensure that the plateau is at $1$ by first solving for $\phi_s(N)$ for the unperturbed potential and then dividing the perturbed potential by $\phi_s(60)$. In the plot, the small-dash curve corresponds to $b=1$ (the same as in Figure \ref{fig:LFP_tanh_drift_detail}), the medium-dash curve corresponds to $b=1.5$, and the large-dash corresponds to $b=2$. All models exhibit the same drifting behavior, with higher values of $b$ and smaller initial values of $r$ corresponding to larger drift in $n_s$. 
 
-Figure \ref{fig:LFP_Log_drift} shows the drift for potentials of the form $V(\phi)=1+\tfrac{0.01}{\phi^2}+a\phi^4+b\log(\phi)$. As discussed in Section \ref{ssec:LargeField}, in order to ensure that inflation ends we must force the potential to have a lower bound. We do this by adding the term $\tfrac{0.01}{\phi^2}$, which puts a minimum at $\phi=0$. Note that the curves do not drift nearly as much as they do in the Tanh model in Figure \ref{fig:LFP_Tanh_drift}. In fact, we note the trend that potentials that begin at an unperturbed \nsr point that is further from the $\phi^4$ point will drift out to larger values on the $n_s$ axis. 
-
+\newpage
+\begin{minipage}[t][0.5\textheight][t]{\textwidth}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Tanh_final.pdf}
 	\caption[Drift in \nsr plane for Tanh model with perturbations.]{A plot showing the drift in the \nsr plane as a Tanh model, $V=1+\tanh(\phi)$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Tanh potentials.}
 	\label{fig:LFP_Tanh_drift}
 \end{figure}
-
+\end{minipage}
+\begin{minipage}[t][0.5\textheight][t]{\textwidth}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Log_final.pdf}
 	\caption[Drift in \nsr plane for Log model with perturbations.]{A plot showing the drift in the \nsr plane as a Log model, $V=1+\tfrac{0.01}{x^2}+\log(\phi)$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Log potentials. Note that the $\tfrac{0.01}{x^2}$ term is added to give the potential a lower bound and hence make it an acceptable model of inflation.}
 	\label{fig:LFP_Log_drift}
 \end{figure}
+\end{minipage}
+\newpage
 
-This trend becomes even more apparent when we examine Figure \ref{fig:LFP_Rsq_drift}, which shows the drift in the \nsr plane due to $\phi^4$ perturbations of the Starobinsky model, $V=(1-e^{-b\sqrt{2/3}\phi})^2$. In the plot, small-dash denotes $b=0.01$, medium-dash denotes $b=0.1$, and large-dash denotes $b=1$. Again, the further the unperturbed potential is from the perturbing function, the farther it drifts when perturbed. This is concerning because \citet{Planck2015} data points to a very small value of $r$, which will push the observationally-acceptable models further from a monomial perturbing function. 
-
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Rsq_final.pdf}
 	\caption[Drift in \nsr plane for Starobinsky model with perturbations.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Starobinsky potentials.}
 	\label{fig:LFP_Rsq_drift}
 \end{figure}
 
-We can quantify this effect by measuring the distance from the perturbing function and maximum amount of drift (measured from the initial, non-perturbed point). Figure \ref{fig:LFP_drift_distance} shows the maximum drift distance as a function of the initial distance from the non-perturbed point to the point corresponding to the perturbing function. The points are colored according to the model used, using the same scheme as in the previous figures: red for the Tanh models, blue for the Log models, and green for the Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, which we measure two different ways. The square points measure the distance from the unperturbed point to the point on the curve with maximum value of $n_s$. The circle points measure the distance from the unperturbed point to the point on the curve with minimum value of $n_s$. Both methods of measuring the drift distance show the same result, as would be expected from examining the drift curves of the models. We see that 
+Figure \ref{fig:LFP_Log_drift} shows the drift for potentials of the form $V(\phi)=1+\tfrac{0.01}{\phi^2}+a\phi^4+b\log(\phi)$. As discussed in Section \ref{ssec:LargeField}, in order to ensure that inflation ends we must force the potential to have a lower bound. We do this by adding the term $\tfrac{0.01}{\phi^2}$, which puts a minimum at $\phi=0$. Note that the curves do not drift nearly as much as they do in the Tanh model in Figure \ref{fig:LFP_Tanh_drift}. In fact, we note the trend that potentials that begin at an unperturbed \nsr point that is further from the $\phi^4$ point will drift out to larger values on the $n_s$ axis. 
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{figures/LFP_drift_distance_final.pdf}
-	\caption[Drift distance vs initial distance.]{A plot showing the drift distance in the \nsr plane as a function of the initial distance from the non-perturbed point to the point of the perturbing function. The color scheme is the same as in Figures \ref{fig:LFP_Rsq_drift}, \ref{fig:LFP_Log_drift}, and \ref{fig:LFP_Tanh_drift}, with red shades denoting Tanh models, blue shades denoting Log models, and green shades denoting Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, measured two different ways, corresponding to the square and circle points. The square/circle points mark the distance from the unperturbed point to the point on the curve with maximum/minimum value of $n_s$.} 
-	\label{fig:LFP_drift_distance}
-\end{figure}
+This trend becomes even more apparent when we examine Figure \ref{fig:LFP_Rsq_drift}, which shows the drift in the \nsr plane due to $\phi^4$ perturbations of the Starobinsky model, $V=(1-e^{-b\sqrt{2/3}\phi})^2$. In the plot, small-dash denotes $b=0.01$, medium-dash denotes $b=0.1$, and large-dash denotes $b=1$. Again, the further the unperturbed potential is from the perturbing function, the farther it drifts when perturbed. This is concerning because \citet{Planck2015} data points to a very small value of $r$, which will push the observationally-acceptable models further from a monomial perturbing function. 
+
+%We can quantify this effect by measuring the distance from the perturbing function and maximum amount of drift (measured from the initial, non-perturbed point). Figure \ref{fig:LFP_drift_distance} shows the maximum drift distance as a function of the initial distance from the non-perturbed point to the point corresponding to the perturbing function. The points are colored according to the model used, using the same scheme as in the previous figures: red for the Tanh models, blue for the Log models, and green for the Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, which we measure two different ways. The square points measure the distance from the unperturbed point to the point on the curve with maximum value of $n_s$. The circle points measure the distance from the unperturbed point to the point on the curve with minimum value of $n_s$. Both methods of measuring the drift distance show the same result, as would be expected from examining the drift curves of the models. We see that 
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=\textwidth]{figures/LFP_drift_distance_final.pdf}
+%	\caption[Drift distance vs initial distance.]{A plot showing the drift distance in the \nsr plane as a function of the initial distance from the non-perturbed point to the point of the perturbing function. The color scheme is the same as in Figures \ref{fig:LFP_Rsq_drift}, \ref{fig:LFP_Log_drift}, and \ref{fig:LFP_Tanh_drift}, with red shades denoting Tanh models, blue shades denoting Log models, and green shades denoting Starobinsky models. The horizontal axis represents the initial distance from the unperturbed point (the colored circles in the drift curve figures) to the point corresponding to the perturbing function (the black circle in the drift curve figures). The vertical axis shows the drift distance, measured two different ways, corresponding to the square and circle points. The square/circle points mark the distance from the unperturbed point to the point on the curve with maximum/minimum value of $n_s$.} 
+%	\label{fig:LFP_drift_distance}
+%\end{figure}
 
 %\begin{table}[htbp]
 %   \centering
@@ -653,16 +716,16 @@ We can quantify this effect by measuring the distance from the perturbing functi
 \subsection{Results for varying perturbing model}
 \label{ssec:DriftVaryAf}
 
-In sections \ref{ssec:TanhCaseStudy} and \ref{ssec:DriftResults}, we explored how perturbing the potential with a $\phi^4$ potential caused significant drift in the \nsr plane. In this section we investigate how the drift curves change as we vary the perturbing function, specifically by increasing the power of the monomial perturbation. Figure \ref{fig:LFP_Rsq_drift_af} shows a drift plot in the \nsr plane for the Starobinsky model with varying powers of perturbation. The small-dash line shows the $\phi^4$ perturbation that we explored previously. The medium-dash line shows a $\phi^6$ perturbation, and the long-dash line shows a $\phi^8$ perturbation. Notice that the $n_s$ axis had to be extended from the previous figures' scale to accommodate the $\phi^8$ perturbation's drift curve. This trend shows us that higher power perturbations induce larger amounts of drift. This is concerning since we can imagine arbitrarily large powers of perturbations and hence higher order perturbations are more likely. \mep{Can I actually say this?} 
+In sections \ref{ssec:TanhCaseStudy} and \ref{ssec:DriftResults}, we explored how perturbing the potential with a $\phi^4$ potential caused significant drift in the \nsr plane. In this section we investigate how the drift curves change as we vary the perturbing function, specifically by increasing the power of the monomial perturbation. Figure \ref{fig:LFP_Rsq_drift_af} shows a drift plot in the \nsr plane for the Starobinsky model with varying powers of perturbation. The small-dash line shows the $\phi^4$ perturbation that we explored previously. The medium-dash line shows a $\phi^6$ perturbation, and the long-dash line shows a $\phi^8$ perturbation. We only chose even powers for the perturbing functions since adding an odd-powered monomial  would make the potential unbounded and hence preclude the vacuum state necessary for the end of inflation. Notice that the $n_s$ axis had to be extended from the previous figures' scale to accommodate the $\phi^8$ perturbation's drift curve. This trend shows us that higher power perturbations induce larger amounts of drift. This is concerning since we can imagine arbitrarily large powers of perturbations and hence higher order perturbations are more likely. 
 
-\begin{figure}[h!]
+\begin{minipage}[t][0.4\textheight][t]{\textwidth}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/LFP_lines_Rsq_varyaf_final.pdf}
 	\caption[Drift in \nsr plane for Starobinsky model with perturbations.]{A plot showing the drift in the \nsr plane as the Starobinsky model, $V=(1-e^{-\sqrt{2/3}\phi})^2$, is perturbed with a $\phi^4$ potential. The black circle marks the location of a pure $\phi^4$ potential, and the other colored circles mark the pure Starobinsky potentials. The blue swatch is the \citet{Planck2015} constraint contour for the TT, TE, EE, and lowP data.}
 	\label{fig:LFP_Rsq_drift_af}
 \end{figure}
-
-Another way to compare the effects of the perturbation is to examine the amplitude of perturbation necessary for the curve to pass beyond the \citet{Planck2015} contours or for it to cross past $n_s=1$. Since the values of $n_s$ are so small ($<0.01$), for our purposes passing beyond the Planck contour can be approximated as passing beyond the line $n_s=0.977$. Table \ref{tab:crossings_vary_af} shows the perturbation amplitudes $a$ required to cross beyond the Planck contour and beyond the line $n_s=1$. Worryingly, by the time we get to a $\phi^8$ perturbation, it only takes a perturbation of the order $10^{-9}$ to push the potential outside of the Planck contour. This indicates that plateau models are highly sensitive to higher order perturbations. Therefore, there must be an incredible degree of fine-tuning to an infinite number of non-zero terms. 
+\end{minipage}
 
 \begin{table}[htbp]
    \centering
@@ -679,6 +742,20 @@ Another way to compare the effects of the perturbation is to examine the amplitu
    \label{tab:crossings_vary_af}
 \end{table}
 
+\newpage
+Another way to compare the effects of the perturbation is to examine the amplitude of perturbation necessary for the curve to pass beyond the \citet{Planck2015} contours or for it to cross past $n_s=1$. Since the values of $n_s$ are so small ($<0.01$), for our purposes passing beyond the Planck contour can be approximated as passing beyond the line $n_s=0.977$. Table \ref{tab:crossings_vary_af} shows the perturbation amplitudes $a$ required to cross beyond the Planck contour and beyond the line $n_s=1$. Worryingly, by the time we get to a $\phi^8$ perturbation, it only takes a perturbation of the order $10^{-9}$ to push the potential outside of the Planck contour. This indicates that plateau models are highly sensitive to higher order perturbations. Therefore, there must be an incredible degree of fine-tuning to an infinite number of non-zero terms. 
+
+
+\subsection{Results for Hilltop Models}
+\label{ssec:HilltopDrift}
+
+In order to verify that our \nsr drift method is in fact picking up the fine-tuning of the higher orders of the potential, we apply the same analysis to the polynomial hilltop models from Section \ref{sssec:Hilltop}. When we add monomial potentials $a\phi^6$ and $a\phi^8$ to a potential of the form 
+\begin{equation}
+V(\phi)=(\sigma^2-\phi^2)^2,
+\end{equation}
+we found that there was no drift whatsoever in the \nsr plane as we increased the perturbation amplitude. This is consistent with our expectations since for Hilltop models, inflation occurs at small values of $\phi$ and hence higher-order terms will be negligible. 
+
+However, this does not mean that small field models automatically have no fine-tuning --- it merely indicates that any fine tuning in the model does not come from constraints on higher oder terms. As we discussed in Section \ref{sec:Latham}, fine-tuning in polynomial models can described via zero-counting on the equation of state, which is a more appropriate method than the \nsr drift method for the small field models. Also, since the \citet{Planck2015} results now disfavor hilltop models in favor of plateau models, it is less important that we find a means to compare the relative complexity of large and small field models. 
 
 
 \FloatBarrier
@@ -687,15 +764,59 @@ Another way to compare the effects of the perturbation is to examine the amplitu
 %%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Multiverse Problem}
-\subsection{Discuss Mukhanov's proposed solution}
-\subsection{Results for perturbation of model}
+
+In Section \ref{sec:LFP} we discussed how perturbing plateau models with large degree polynomials causes the observational results of the models to undergo a large amount of drift in the \nsr plane. We argued that this is a cause for concern because it requires us to fine-tune the potentials so that the coefficients of their series expansion have very precise, non-zero values. This method of analysis is also applicable to proposed solutions to the multiverse problem. After \citet{Planck2013} constrained $n_s$ and $r$ to values only reachable by plateau models, inflation encountered problems problems requiring smooth initial conditions and spawning a vast multiverse \citep{Ijjas+2013}. The multiverse problem can be resolved by grafting a steep slope onto the plateau \citep{Ijjas+2013,Mukhanov2014}. We show that this method of solving the multiverse problem is intractable because it encounters the same \nsr drift that we explored in Section \ref{sec:LFP}.
+
+\subsection{Analysis of Mukhanov's model}
+
+\citet{Mukhanov2014} proposes solving the multiverse problem by taking a plateau potential $V_p(\phi)$ and adding a singularity to produce a potential of the form:
+\begin{equation}
+V(\phi)=\frac{\phi_m^aV_p(\phi)}{(\phi_m-\phi)^a},
+\label{eqn:MukhanovGeneral}
+\end{equation}
+where $\phi_m$ is the location of the singularity and $a$ is some positive power. This singularity produces a steep curve on the plateau just before $\phi_m$. To verify that this model solves the multiverse problem, we must ensure that $\phi_m$ is less than $\phi_{ei}$, the threshold for eternal inflation. In order to do so, we must first find the value of $\phi_m$ that is consistent with the observed amplitude of density fluctuations. We determine $\phi_m$ by imposing the slow roll constraints on the density perturbations:
+\begin{equation}
+\frac{\delta\rho}{\rho} \approx_{sr} \frac{V^{3/2}(\phi)}{V'(\phi)} \approx 10^{-4},
+\end{equation}
+at $\phi_{60}=\phi(N=60)$, which is in turn determined by the slow roll approximation 
+\begin{equation}
+\frac{V''(\phi_N)}{V(\phi_N)} \approx_{sr} \frac{1}{N}
+\end{equation}
+\citep{MukhanovBook2005}. Once we have found $\phi_m$, we At values of $\phi$ greater than $\phi_{ei}$, the universe would undergo eternal inflation do to self reproduction, in which quantum fluctuations are large enough to spawn an infinite number of causally disconnected universes. This is a problem because this produces an infinite number of universes with varying laws of low energy physics \citep{Linde2008,Linde1986}. Since in an infinite multiverse every possible universe will occur and will do so an infinite number of times, a self reproducing theory loses all of its predictive power. Grafting a steep slope onto the plateau solves this problem by \mep{Insert explanation here}. 
+
+As an example, \citet{Mukhanov2014} takes a potential of the form
+\begin{equation}
+V(\phi)=\frac{(1-e^{-\phi})^2}{(\phi_m-\phi)^4}
+\label{eqn:MukhanovExp}
+\end{equation}
+and claims that it is ``perfect agreement with observations''. However, we find that this is only true for very large values of $\phi_m$ and that once $\phi_m$ is made small enough to counter eternal inflation, the potential no longer lies within the \citet{Planck2015} contours. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/Mukhanov.pdf}
-	\caption[Drift in \nsr plane for Mukhanov model as the singularity moves to smaller $\phi$.]{A plot showing the drift in the \nsr plane as the singularity $\phi=a$ in the Mukhanov model, $V=\tfrac{a^4(1-e^{-\phi})^2}{(a-\phi)^4}$, is moved to smaller values of $a$ (i.e. closer to the 60 efold mark). The coloring corresponds to the value of $a$, with darker shades indicating smaller $a$.}
-	\label{fig:LFP_Rsq_varyaf_drift}
+	\caption[Drift in \nsr plane for Mukhanov model as the singularity moves to smaller $\phi$.]{A plot showing the drift in the \nsr plane as the singularity $\phi=\phi_m$ in the Mukhanov model, $V=\tfrac{(1-e^{-\phi})^2}{(\phi_m-\phi)^4}$, is moved to smaller values of $\phi_m$ (i.e. closer to the 60 efold mark). The coloring of the markers corresponds to the value of $\phi_m$, with darker shades indicating smaller $\phi_m$. The blue swatches are the \citet{Planck2015} constraint contours used previously.}
+	\label{fig:Mukhanov_drift}
 \end{figure}
+
+Figure \ref{fig:Mukhanov_drift} shows an \nsr drift plot similar to those discussed in Section \ref{sec:LFP}, but using Equation \ref{eqn:MukhanovExp} for the potential and varying $\phi_m$ instead of the perturbation amplitude. For very large values of $\phi_m$, $\phi_m=1000$, the potential remains within the \citet{Planck2015} contour. However, by the time $\phi_m=300$ (still a quite large value!), the potential's \nsr value has moved outside the constraint contour. This is very problematic in terms of fine tuning because it shows that in order to have preserve observational results, the steep slope must be pushed back to very large values of $\phi$. 
+
+\citet{Mukhanov2014} calculated the value of $\phi_{ei}$ to be $1000$ for the potential in equation \ref{eqn:MukhanovExp}. Therefore, in this specific case it turns out that the observational results are achievable for $\phi_m$ very close to $\phi_{ei}$. However, \citet{Mukhanov2014} also suggested a model with the potential
+\begin{equation}
+V(\phi)=\frac{(1-e^{-\phi})^2}{(\phi_m-\phi)^6},
+\label{eqn:MukhanovExp6}
+\end{equation}
+where the singularity has order 6 instead of 4, giving the barrier a steeper slope. When we perform the \nsr drift analysis on this model, we obtain the results presented in Figure \ref{fig:Mukhanov6_drift}. Recall from Section \ref{ssec:DriftVaryAf} that increasing the power of the perturbing monomial increased the amount of drift and also increased the sensitivity to the perturbation amplitude. We see the same behavior with Mukhanov's model, where increasing the order of the singularity increases the amount of drift in the \nsr plane. We also notice that singularities at higher values of $\phi_m$ produce the same amount of drift as smaller values of $\phi_m$ did for the 4th order singularity. While in the 4th order case the model did not drift out of the \citet{Planck2015} constraint contour until around $\phi_m=300$, in the 6th order case the model drifts out of the contour by $\phi_m=500$. For comparison, $\phi_{60}$ is about 5 for these models. 
+
+This sensitivity is particularly worrying, not just because a barrier at such a large value as such dramatic observational effects, but also because \citet{Mukhanov2014} calculated $\phi_{ei}$ to be 100 for the 6th order model. In order to prevent eternal inflation and the multiverse problem, Mukhanov proposed inserting the singularity as a barrier to prevent the field from accessing values in the eternally-inflating regime. Therefore, for the potential to avoid the multiverse problem, it must have $\phi_m<\phi_{ei}$. However, for the 6th order singularity, we find that using a value of $\phi_m<\phi_{ei}\approx100$ will cause an unacceptable amount of \nsr drift. Therefore, Mukhanov's proposed method of avoiding the infinite multiverse is at best finely-tuned and at worst inconsistent with observations. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{figures/Mukhanov6.pdf}
+	\caption[Drift in \nsr plane for Mukhanov model as the singularity moves to smaller $\phi$.]{A plot showing the drift in the \nsr plane as the singularity $\phi=\phi_m$ in the Mukhanov model, $V=\tfrac{(1-e^{-\phi})^2}{(\phi_m-\phi)^6}$, is moved to smaller values of $\phi_m$ (i.e. closer to the 60 efold mark). The coloring of the markers corresponds to the value of $\phi_m$, with darker shades indicating smaller $\phi_m$. The blue swatches are the \citet{Planck2015} constraint contours used previously.}
+	\label{fig:Mukhanov6_drift}
+\end{figure}
+
+\subsection{Analysis of other similar models}
 
 \FloatBarrier
 %%%%%%%%%%%%%%%%%%%
@@ -703,6 +824,19 @@ Another way to compare the effects of the perturbation is to examine the amplitu
 %%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Conclusions}
+
+The field of inflationary cosmology comes with such grand successes that it is often hard to also see its shortcomings, even ones potentially grievous. As a theory, inflation is extremely attractive because it solves many perplexing problems, namely the horizon, flatness, and monopole problems, that otherwise do not have any clear solution. Although at first the idea of inflationary theory seems simple and elegant --- all we do is add to the Standard Model a scalar field with an appropriate potential and we get an inflating universe --- as the field has developed the form of the potential has been constrained more and more by both theory and observation. Observations of the CMB have constrained both the spectral tilt and tensor-to-scalar ratio of the density perturbations of the early universe to incredible precision, and these results are not consistent with the most obviously simple inflationary potentials, such as $\phi^2$, $\phi^4$, and other monomial or low-order polynomials. On the theory side, cosmologists have developed constraints such as the slow roll conditions to solve the graceful exit problem. The theory has recently encountered a new problem, that of eternal inflation and the inflationary multiverse. This problem constrains inflation to models that cannot reach a threshold $\phi_{ei}$, after which quantum fluctuations dominate the evolution of the field and hence prevent the end of inflation. In the face of all of these constraints, inflationary models have increased in complexity to the point where some have called into question the validity of the field itself.
+
+My thesis works to take these vague notions of complexity and fine-tuning and define specific measures for determining the degree of fine-tuning in an inflationary model. Our work builds off of the work of \citet{Boyle+2006}, who uses the evolution of the equation of state to determine the degree of fine-tuning in an inflationary potential. Specifically, the degree of fine-tuning is defined to be the number of zeros in the equation of state and its derivatives. We examine Boyle's results in light of the recent \citet{Planck2015} observational constraints, which together show that the simplest models by Boyle's measure are the least consistent with current observations. 
+
+Boyle's method works well for the polynomial models considered in the paper; however, the recent Planck results have favored a new class of models: plateau potentials. The main part of my project explored a new method of examining the fine tuning in plateau models, using perturbation by a monomial term in the potential. The motivation for this method stems from the idea that plateau models are fine-tuned because the series expansion of their potentials contain an infinite number of non-zero terms that must be precisely balanced to create a plateau. We investigate this general intuition by taking a plateau potential and perturbing it with a monomial term such as $a\phi^4$. We then track how increasing the perturbation amplitude $a$ affects the observational parameters $n_s$ and $r$. We find that increasing $a$ causes significant drift in the \nsr plane, until with a large enough perturbation amplitude it converges on the \nsr values for the perturbing function. 
+
+This methodology provides two means of quantifying the degree of fine tuning: either by measuring the amount of drift in $n_s$ and $r$ or by measuring the the amplitude of perturbation required for a certain amount of drift (e.g. to drift out of the Planck contours or to drift past $n_s=1$). We find that the Tanh models have the largest total drift in the \nsr plane, while the \mep{BLANK} models are the most sensitive to the perturbation amplitude. We also investigated how the power of perturbing function affected the total drift and sensitivity, finding that the higher order monomials induced larger net drift and greater sensitivity to the amplitude of perturbation. These results are especially concerning for plateau models because it tells us that the higher order terms are extremely sensitive to perturbation and must be very finely balanced in order to reproduce observations. This sensitivity is a significant manifestation of fine-tuning in plateau potentials and merits the attention of theorists as they design such models.
+
+The sensitivity of plateau models to high-order perturbations has definite theoretical consequences. Adding a monomial perturbation has the effect of grafting a steep slope onto the plateau. However, \citet{Mukhanov2014} used exactly this idea to propose a solution to the multiverse problem. In order to make the eternally-inflating regime $\phi>\phi_{ei}$ inaccessible, Mukhanov inserted a singularity in his potential at $\phi_m<\phi_{ei}$, effectively grafting onto the plateau a steep slope asymptoting to $\phi=\phi_m$. We applied our \nsr drift methodology to Mukhanov's model, tracking how the observational predictions changed as we decreased $\phi_m$ (and hence brought the slope closer to the edge of the plateau and the $\phi_{60}$ mark). We found that bringing the singularity only as close as $\phi_m=300$ (for reference, $\phi_{60}\sim5$) causes a drift large enough for the potential to leave the Planck contours. Although Mukhanov's 4th order singularity model is allowed $\phi_m$ as large as 1000 and hence can remain within the Planck contours, the 6th order singularity model is only allowed $\phi_m\lesssim100$, which takes the predictions far outside the Planck constraints. Thus, Mukhanov's proposed solution is on shaky grounds. 
+
+\newpage
+In conclusion, we find that considering the predictive consequences of perturbations is a productive way to measure the fine-tuning in plateau potentials. The large amount of drift caused by tiny perturbation amplitudes is a significant concern when it comes to constraining large field plateau models. As theorists continue to construct new models of inflation, it will be important to keep in mind the instabilities inherent in plateau potentials. If this and other manifestations of fine-tuning continue to plague inflationary theory, it might even be advisable to extend one's outlook to other theories of the early universe, such as ekpyrotic or cyclic models, that might be able to solve the horizon, flatness, and monopole problems without resorting to finely-tuned models. Further work in exploring the existence/amount fine-tuning in such non-inflationary theories is recommended to compliment the work done on the subject within inflationary theory. 
 
 %%%%%%%%%%%%%%%%%%%
 %		Appendix	

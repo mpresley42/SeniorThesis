@@ -1,6 +1,10 @@
-\documentclass[onecolumn,apj]{emulateapj}
+%\documentclass[onecolumn,apj]{emulateapj}
 %\documentclass[senior,black]{PrincetonThesis}
-\usepackage{ctable}
+\documentclass[12pt,doublespacing]{princeton_astro_thesis}
+
+\usepackage{booktabs}  % for prettier-than-default tables
+
+%\usepackage{ctable}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -11,29 +15,37 @@
 %\usepackage{pdflscape}
 %\usepackage{lscape}
 %\citestyle{aa}
-\usepackage{ amssymb }
+%\usepackage{ amssymb }
 
 \def\d{\mathrm{d}}
 \def\L{\mathscr{L}}
 \def\half{\tfrac{1}{2}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TROUBLE SECTION
+\usepackage{color}
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \newcommand{\mep}[1]{{\color{applegreen} \textbf{[MEP:  #1]}}}
 \newcommand{\hl}[1]{\colorbox{yellow}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\title{Senior Thesis Draft}
-%\author{Morgan Presley}
-%\department{Department of Astrophysical Sciences}
-%\adviser{Paul Steinhardt}
-%\degreemonth{June}
-%\degreeyear{2015}
+\title{Quantifying the Degree of Fine-tuning in Inflationary Potentials}
+\author{Morgan Presley}
+\adviser{Paul Steinhardt}
+\date{May 2015}
+
+\abstract{To be written later.}
+
+\acknowledgments{I would like to acknowledge Mathematica's dedicated efforts at making my thesis as difficult to complete as possible.}
+
+\dedication{I would like to dedicate my thesis to my family -- both in Illinois and here at Princeton -- for their support, without which I could not have finished this thesis.} 
 
 \begin{document}
 
 \title{Senior Thesis Draft}
 \author{Morgan Presley}
 
-\section{General Outline of Thesis}
+\chapter{General Outline of Thesis}
 \begin{itemize}
 	\item Introduction \& Background Theory
 		\begin{itemize}
@@ -45,28 +57,33 @@
 			\item Current status: trying to impose a measure to make bubbles like us more common
 			\item But let's ignore the current problems and I'll show that even the simplest models in the current theory must be very fine-tuned to reproduce the current data
 		\end{itemize}
-	\item How to quantize complexity / fine tuning
+	\item Discussion of Current Models
 		\begin{itemize}
-			\item Look at Latham's paper
+			\item Replication of Planck Plot
+			\item Large Field vs Hilltop
 		\end{itemize}
-	\item Examine tuning of inflationary models
+	\item How to quantify complexity / fine tuning
 		\begin{itemize}
-			\item My reproduction of Latham's results
+			\item Discuss Latham's method
+			\item My replication of Latham's Plot
 		\end{itemize}
-	\item Examine tuning of ekpyrotic models
+	\item Examine Fine-tuning of Large Field Models
 		\begin{itemize}
-			\item My results
+			\item General Idea
+			\item Drift Plots for tanh, Rsq, Exp models
 		\end{itemize}
-	\item Examine tuning of anamorphic models (maybe)
+	\item Discussion of Mukhanov's Model
 		\begin{itemize}
-			\item Have to wait until paper comes out
-		\end{itemize}	
+			\item Motivation of Mukhanov's potential
+			\item Discuss how he's doing exactly what we said was a problem
+			\item My drift plot
+		\end{itemize}
 	\item Conclusion
 \end{itemize}
 
-\section{Introduction}
-\subsection{How to describe an inflationary theory}
-\label{ssec:GeneralDescription}
+\chapter{Introduction}
+\section{How to describe an inflationary theory}
+\label{sec:GeneralDescription}
 The Standard Model that describes all of fundamental physics consists of many different fields (e.g. scalar, vector, Fermion, Boson) and interactions between the given fields. These are put together into a giant universe-encompassing Lagrangian, which then determines all possible interactions. An inflationary theory adds a scalar field $\phi$ and accompanying potential $V(\phi)$ to the Standard Model Lagrangian in order to facilitate the drastic expansion required in the early universe. For values of $\phi$ where the potential is large, the inflationary field encourages the expansion of the universe; when the potential is zero, then the inflationary field does not contribute to expansion. 
 
 As an example, consider the potential in Figure \ref{fig:MexHatCartoon}, which shows a potential colloquially called the ``Mexican hat'' potential: $V(\phi)=\lambda(\phi^2-\sigma^2)^2$. For this potential, the extremum at $\phi=0$ is referred to as the false vacuum. At this value of the field, the universe is inflating. However, since the false vacuum is unstable, the field will ``roll down the hill'' of the potential and end up at the true vacuum, $\phi=\sigma$. When the inflationary field settles in the true vacuum (which is stable), the inflationary period ends. Potentials like this which have a false vacuum at $\phi=0$ are called hilltop models. For hilltop models, the inflationary period is dominated by inflation at small values of $\phi$. Hence, in a polynomial expansion of the field the lowest order terms will dominate. Thus, the potential will have only a handful of parameters (corresponding to the coefficients of the lowest order terms) requiring constraint. However, as will be discussed in Section \ref{PlankComparison}, such models do not reproduce observational results.
@@ -93,18 +110,23 @@ As we will see in the sections to come, this game of picking potentials to predi
 
 In this paper we explore in the manner of \citet{Boyle+2006} a method of quantifying the amount of fine-tuning in an inflationary potential by counting the number of zeros in the equation of state and its derivatives. We find that \hl{...} We also explore a new method of quantifying the amount of fine-tuning in large field models that takes into account the sensitivity of the model to perturbations in higher-order terms. We find that \hl{...}
 
-\subsection{History of Inflationary Theory}
-\label{ssec:History}
-Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem, discussed in more detail in Sections \ref{ssec:horizon} and \ref{ssec:Flatness}. Guth's inflationary model, which proposed a period of exponential expansion in a false vacuum due to supercooling during cosmological phase transitions, solved both the horizon and flatness problems.  However, later work by Guth and Weinberg \citep{Guth+Weinberg1983} showed that the transition could not be smoothly completed in such a way that would result in a space homogeneously filled with the new phase. Further, a random region within the inhomogeneous space would be unlikely to resemble our own universe. 
+\section{History of Inflationary Theory}
+\label{sec:History}
+Inflationary theory was first proposed by Alan Guth as a possible solution to the horizon and flatness problems \citep{Guth1981}. At the time, the standard cosmological model of the early universe was an adiabatically expanding, radiation-dominated universe. This model had two fundamental problems: the horizon problem and the flatness problem, discussed in more detail in Sections \ref{sec:horizon} and \ref{sec:Flatness}. Guth's inflationary model, which proposed a period of exponential expansion in a false vacuum due to supercooling during cosmological phase transitions, solved both the horizon and flatness problems.  However, later work by Guth and Weinberg \citep{Guth+Weinberg1983} showed that the transition could not be smoothly completed in such a way that would result in a space homogeneously filled with the new phase. Further, a random region within the inhomogeneous space would be unlikely to resemble our own universe. 
 
-Andre Linde addressed these problems with a new inflationary theory in which inflation doesn't occur at the false vacuum but rather as the inflationary field rolled down the hill of the potential towards the true vacuum. \mep{Find Citation to presentation in 1981} A similar theory was simultaneously developed by \citet{Albrecht+Steinhardt1982}. This new inflation resolved the problem of the inhomogeneities because, as mentioned in Section \ref{ssec:GeneralDescription}, density fluctuations are inversely proportional to $\dot \phi$. Guth's previous model resulted in deSitter expansion, which corresponds to $\phi=const$, and hence results in unphysically large density fluctuations. Since in this new model inflation occurs as the field rolls down the hill, $\dot \phi \neq 0$ and perturbations can be made small enough to be physical. 
+Andre Linde addressed these problems with a new inflationary theory in which inflation doesn't occur at the false vacuum but rather as the inflationary field rolled down the hill of the potential towards the true vacuum. \mep{Find Citation to presentation in 1981} A similar theory was simultaneously developed by \citet{Albrecht+Steinhardt1982}. This new inflation resolved the problem of the inhomogeneities because, as mentioned in Section \ref{sec:GeneralDescription}, density fluctuations are inversely proportional to $\dot \phi$. Guth's previous model resulted in deSitter expansion, which corresponds to $\phi=const$, and hence results in unphysically large density fluctuations. Since in this new model inflation occurs as the field rolls down the hill, $\dot \phi \neq 0$ and perturbations can be made small enough to be physical. 
 
 Although the new inflationary model solved some of the problems with Guth's original proposal, new inflation still came with issues of its own. For instance, the inflation field in the new theory often could not begin in thermal equilibrium with other fields, invalidating the use of cosmological phase transitions, which formed the basis of new inflation theory \citep{Linde2000}. Also, in the new inflationary scenario, inflation can only begin after at a time at least six orders of magnitude later than the Planck time, which is the order of a typical lifetime for a hot, closed universe \citep{LindeBook2005}. These problems, together with others, suggested that new inflation needed to be replaced with an even newer theory. 
 
+\citet{Linde1983} proposed such a theory, called chaotic inflation, which forms the basis for most modern theories of inflation. Chaotic inflation solves the problems of its predecessors by initiating inflation for any\hl{?} initial conditions -- even conditions without thermal equilibrium or at the Planck density \citep{LindeBook2005}. In chaotic inflation, the inflaton field begins at a point far from the minimum of the potential. The field equation for chaotic inflation includes a viscosity term $\propto H \dot \phi$, so when the universe is expanding rapidly, the inflaton field rolls slowly down the potential, with the energy density of the field approximately constant. This ``slow roll'' inflation causes the universe to expand $\propto e^{Ht}$. This exponential inflation solves most problems of previous theories because all inhomogeneities in the original universe get stretched $\sim 10^{10^{12}}$ times after only $10^{-35}$s of inflation. (For comparison, the radius of the observable universe is on the order of $10^{28}$cm.) Additionally, this solves the flatness problem because even if the universe originally had a small radius of curvature, after inflation that radius is effectively infinite compared to the radius of the observable universe. \citep{Linde2000} 
+%Although several more theories of inflation have been proposed (e.g. hybrid inflation, which combines two scalar fields of chaotic inflation), most are heavily based on the theory of chaotic inflation.
 
+However, chaotic inflation still retains a particularly insidious problem, that of eternal inflation and an inflationary multiverse. Upon closer examination, it has been found that models with large scalar fields during the inflationary period produce large quantum fluctuations in the field. These fluctuations cause the local rate of inflation to change, possibly increasing the rate of inflation (equivalently, delaying the end of inflation) in a certain region. As that region expands, quantum fluctuations in that region can also cause another local section to inflate faster, and this process continues ad infinitum. Thus, once inflation begins, quantum fluctuations preclude it from ending in all regions of space. Further, due to the overwhelming expansion that occurs during inflation, the volume of space that remains inflating completely dominates the volume in which inflation ends.
 
-\subsection{Horizon Problem}
-\label{ssec:horizon}
+To make this a little more precise, consider a region of space of radius $r$ that is undergoing exponential expansion: $a(t) \propto e^{Ht}$. The furthest distance a point in that region could influence is $H^{-1}$, so if $r>H^{-1}$, then that region can be considered its own universe.\footnote{The event horizon is defined as $d_e(t) = a(t) \int^{\infty}_t \frac{\d t}{a}$.} Following the calculation in \citet{Linde+1994}, we find how much the volume of a region of radius $H^{-1}$ increases during a time interval $H^{-1}$. During that time, the field will decrease due to its classical motion by $\Delta \phi = \tfrac{1}{4\pi \phi}$. However, the average amplitude of quantum fluctuations in the field are $|\delta \phi| = \tfrac{H}{2\pi}$. Therefore, for large enough values of $\phi$, the quantum fluctuations will dominate over the classical decrease in the field. In fact, further calculation shows that in the time $H^{-1}$, the region grows into $e^3\sim20$ disconnected domains and that in half of those domains the inflationary field will grow. Thus, the growth of the number of disconnected domains with increasing $\phi$ grows as $\propto e^{(3-\ln2)Ht}$. Also, it turns out that, regardless of the initial value of 
+
+\section{Horizon Problem}
+\label{sec:horizon}
 Simply put, the horizon problem is the realization that the universe is homogenous and isotropic on scales far larger than the particle horizon (the farthest distance from which a point could ever receive information, given the age and expansion rate of the universe). The particle horizon is defined as 
 \begin{equation}
 d_p(t) = a(t) \int_0^t \frac{\d t}{a(t)},
@@ -122,12 +144,12 @@ Observations of the CMB show the universe to homogenous to [Insert ridiculously 
 \end{equation}
  Taking $T_i$ to be the Planck temperature ($\sim 10^{32}$K) and $T_* \sim $
 
-\subsection{Flatness Problem}
-\label{ssec:Flatness}
+\section{Flatness Problem}
+\label{sec:Flatness}
 
-\section{Derivation of an Inflationary Theory}
-\subsection{Inflationary Friedmann equation}
-\label{ssec:InflationaryFriedmann}
+\chapter{Derivation of an Inflationary Theory}
+\section{Inflationary Friedmann equation}
+\label{sec:InflationaryFriedmann}
 To see how one could implement an inflationary theory, let us first examine a non-inflationary Friedmann equation:
 \begin{equation}
 H^2 = \left ( \frac{\dot a(t)}{a(t)} \right ) ^2 = \frac{8 \pi G}{3} \left [ \frac{\rho^0_m}{a^3} + \frac{\rho^0_r}{a^4} + \Lambda + \frac{\sigma^2}{a^6} + \frac{K}{a^2} \right ]
@@ -159,9 +181,9 @@ From this, we can see that the condition for an expanding universe is $\epsilon<
 However, note that at arbitrarily early times (small values of $a$), the anisotropy term will dominate. Thus, in order for inflation to dominate during early times, the value of $\rho^0_\phi$ compared to $\sigma^2$ and the other coefficients must be specified such that at the Planck scale the inflationary term will dominate. %Therefore, we want to find an inflationary theory that produces an inflationary term in the Friedmann equation $\propto a^{-2\epsilon}$ so that the universe will be dominated by expansion at early times. 
 Also, it is important to note that, in order for inflation to end, $\epsilon$ must grow to become greater than one, so we know that $\epsilon$ should be time-dependent. 
 
-\subsection{Inflationary Field \& Equation of State}
+\section{Inflationary Field \& Equation of State}
 
-In order to derive a field theory that will produce such an inflationary term consistent with the requirements detailed in Section \ref{ssec:InflationaryFriedmann}, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
+In order to derive a field theory that will produce such an inflationary term consistent with the requirements detailed in Section \ref{sec:InflationaryFriedmann}, we turn to the equation of state, $w=\rho/p$, where $\rho$ is the energy density and $p$ is the pressure of the field. The equation of state is related to $\epsilon$ by the equation 
 \begin{equation}
 \epsilon = \tfrac{3}{2}(w+1). 
 \label{eqn:eps_w}
@@ -222,7 +244,7 @@ completely determines the evolution of a universe dominated by an inflationary p
 \end{equation}
 Note that, for general inflationary potentials, $\epsilon$ will not be constant in time. This is fortuitous since, in order for inflation to end, $\epsilon$ will have to go from a value greater than 1 to a value less than 1. We can also use this equation to further constrain the inflationary potential with a ``graceful exit'' condition. \mep{I think this is true. I need to look up more info \& elaborate.}
 
-\subsection{Calculating Observable Parameters}
+\section{Calculating Observable Parameters}
 Of course, the whole point of creating an inflationary theory is to be able to reproduce observational data. When observations from experiments such as WMAP and Planck observe the early universe, they measure the power spectrum of density fluctuations in the primordial plasma. \mep{More elaboration on where these come from}
 
 Instead of working in units of time, where the time at the end of inflation is difficult to pinpoint, we choose instead to work in terms of the number of e-folds until the end of inflation, defined as 
@@ -239,13 +261,13 @@ n_s \approx 1 - 2\epsilon - \frac{\d \ln(\epsilon)}{\d N} + \mathcal{O}(\epsilon
 \end{equation}
 where the equation of state is treated as a function of the number of e-foldings instead of a function of time. 
 
-In addition to the spectral tilt at $N_*$, observations can also constrain the tensor-to-scalar power ratio, typically denoted $r$. The tensor-to-scalar ratio is typically computed in the slow-roll approximation (See Section \ref{ssec:SlowRoll} for more details), and we follow the conventions of \citet{Planck2013} to get 
+In addition to the spectral tilt at $N_*$, observations can also constrain the tensor-to-scalar power ratio, typically denoted $r$. The tensor-to-scalar ratio is typically computed in the slow-roll approximation (See Section \ref{sec:SlowRoll} for more details), and we follow the conventions of \citet{Planck2013} to get 
 \begin{equation}
 r \approx 16 \epsilon.
 \end{equation}
 
 
-\subsection{Fine-tuning in an Inflationary Theory}
+\section{Fine-tuning in an Inflationary Theory}
 Now that we have the basic mechanics of an inflationary theory, we see that defining an instance of an inflationary theory reduces to defining the inflationary potential $V(\phi)$. In order for inflation to be a predictive theory, we need to find a way to choose which potentials are reasonable and then find whether any of those potentials would generate a universe that conforms with observations. 
 
 
@@ -260,8 +282,8 @@ and the Klein-Gordon equation becomes
 \label{eqn:KG_N}
 \end{equation}
 
-\subsection{Slow Roll Approximation}
-\label{ssec:SlowRoll}
+\section{Slow Roll Approximation}
+\label{sec:SlowRoll}
 In the slow roll approximation, we assume that $\dot \phi$ and $\ddot \phi$ are small. In order for this to be true, the inflationary potential must not be varying rapidly, leading us to the slow roll approximations:
 \begin{equation}
 \left | \frac{V'(\phi)}{V(\phi)} \right | <<1 \text{\ \ \ and\ \ \ } \left | \frac{V''(\phi)}{V(\phi)} \right | <<1 .
@@ -284,6 +306,6 @@ We use these approximations to find the initial conditions for integrating equat
 where we have used the slow roll approximations $\half \dot \phi^2 << V(\phi)$ and equation (\ref{eqn:KG_sr}). Setting $\epsilon=1$ gives us an equation we can solve for $\phi(N=0)$. Once we have $\phi(N=0)$, we can easily us equation (\ref{eqn:KG_sr}) to find $\dot \phi(N=0)$. 
 
 \bibliographystyle{apj}
-\bibliography{thesis}{}
+\bibliography{thesis}
 
 \end{document}
